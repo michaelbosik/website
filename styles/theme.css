@@ -1,16 +1,148 @@
-
 /* PAGE */
-html{
-    background-color: #385687;
-    width: 100%;
+html, body{
+    padding: 0;
+    margin: 0;
+    background-color: #C6E4DC;
+}
+
+body{
+    max-width: 1500px;
+    margin:0 auto;
+}
+
+.button{
+    padding: 12px;
+    text-decoration: none;
+    color: #1C444F;
+}
+
+.button.is-circled{
+    transition: all .2s ease-in;
+    background-color: transparent;
+    border-radius: 25px;
+    border: 3px solid #1C444F;
+}
+
+.button.is-circled:hover{
+    background-color: #1C444F;
+    color: #C6E4DC;
+}
+
+.button:active, .button.is-circled:active{
+    color: white;
 }
 /* END PAGE */
 
 /* TEXT */
+main p{
+    font-family: monospace;
+    font-size: 30px;
+}
+
+nav a{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+#welcome h1{
+    font-family: 'Helvetica';
+    font-size: 5em;
+    color: #1C444F;
+}
 /* END TEXT */
 
 /* HEADER */
-header nav{
+nav{
+    overflow: hidden;
+    top: 0;
+    padding: 20px;
+    margin:0 auto;
+}
 
+.nav-item{
+    display: inline-block;
+    margin:0 auto;
+    padding: 0;
+}
+
+nav a{
+    color: #1C444F;
+}
+
+#nav-logo{
+    height: 80px;
+}
+
+#logo{
+    border-radius: 50%;
+    height: 100%;
+}
+
+#nav-links{
+    margin-top: 25px;
+    float: right;
 }
 /* END HEADER */
+
+/* MAIN */
+main{
+    width:90%;
+    margin:0 auto;
+    margin-top: 80px;
+    position: static;
+}
+
+main div{
+    display: block;
+    background-color: #4876AB;
+    border-radius: 10px;
+    min-height: 10px;
+    padding: 20px;
+    margin:0 auto;
+}
+
+main .sep{
+    display: inline-block;
+    padding-top: 10px;
+    height: 20px;
+    width: 100%;
+}
+
+#welcome{
+    text-align: center;
+    background-color: transparent;
+    padding: 0;
+}
+
+main .sep line{
+    stroke:#1C444F;
+    stroke-width: 3;
+}
+
+.homeinfo #avatar{
+    display: block;
+    margin:0 auto;
+    padding: 30px;
+    padding-top: 0;
+}
+
+.homeinfo div{
+    background-color: #7EA5CB;
+    border-radius: 10px;
+    padding: 20px;
+    display: inline-block;
+    margin:0 auto;
+
+}
+
+.homeinfo #desc{
+    padding: 20px;
+}
+
+#profile{
+    height: 100%;
+    border-radius: 10px;
+}
+/* END MAIN */
