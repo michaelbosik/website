@@ -2,9 +2,44 @@
 <html>
     <head>
         <title>Michael Bosik - Portfolio</title>
-        <link rel="shortcut icon" href="images/brand/logo.png" type="image/x-icon">
+        <link rel="shortcut icon" href="images/brand/icon.png" type="image/x-icon">
         <link rel="stylesheet" href="styles/theme.css" type="text/css">
+        <link rel="stylesheet" href="styles/portfolio.css" type="text/css">
         <script src="https://kit.fontawesome.com/6998a6816b.js"></script>
-        <meta http-equiv="Refresh" content="0; url=wip.html">
     </head>
+
+    <body>
+        <nav class="nav">
+            <div class="nav-item" id="nav-logo">
+                <a href="index.html"><img src="images/brand/logo.png" id="logo"></a>
+            </div>
+            <div class="nav-item" id="nav-links">
+                <a class="button" href="about.html">About</a>
+                <a class="button is-circled" href="portfolio.html">Portfolio</a>
+            </div>
+        </nav>
+
+        <main>
+            <div class="info">
+                <div class="sub-info">
+                    <h4>Projects</h4>
+                    <div>
+                        <p>
+                            This is where my projects will go
+                        </p>
+                    </div>
+                </div>
+                <svg class="sep"><line x1="0" y1="0" x2="100%" y2="0"/></svg>
+                <div class="sub-info" id="resume">
+                    <h4>Resume</h4>
+                    <div id="downloads">
+                        <p>Download:</p>
+                        <a href="files/resume.pdf" download="Bosik_Michael_Resume.pdf" class="button is-filled">PDF <i class="far fa-file-pdf"></i></a>
+                        <a href="files/resume.docx" download="Bosik_Michael_Resume.docx" class="button is-filled">DOCX <i class="far fa-file-word"></i></a>
+                    </div>
+                    <iframe src="files/resume.pdf" scrolling="no"></iframe>
+                </div>
+            </div>
+        </main>
+    </body>
 </html>

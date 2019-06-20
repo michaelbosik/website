@@ -1,0 +1,27 @@
+#resume{
+    display: block;
+    width: 800px;
+    max-width: 75%;
+    margin:0 auto;
+    padding: 20px;
+    height: 100%;
+}
+
+#resume iframe{
+    width: 100%;
+    height: 1100px;
+    margin:0 auto;
+}
+
+#downloads{
+    display: block;
+    margin:0 auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+#downloads a, p{
+    display: inline-block;
+    margin:0 auto;
+}

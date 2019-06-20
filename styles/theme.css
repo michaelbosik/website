@@ -1,3 +1,13 @@
+/* Michael Bosik - THEME
+ *
+ * #1C444F
+ * #4876AB
+ * #6191C6
+ * #7EA5CB
+ * #C6E4DC
+ *
+ */
+
 /* PAGE */
 html, body{
     padding: 0;
@@ -23,30 +33,49 @@ body{
     border: 3px solid #1C444F;
 }
 
+.button.is-filled{
+    transition: all .2s ease-in;
+    background-color: #1C444F;
+    border-radius: 25px;
+    color: #C6E4DC;
+}
+
+.button.is-filled:hover{
+    background-color: #C6E4DC;
+    color: #1C444F;
+}
+
 .button.is-circled:hover{
     background-color: #1C444F;
     color: #C6E4DC;
 }
 
-.button:active, .button.is-circled:active{
+.button:active, .button.is-circled:active, .button.is-filled:active{
     color: white;
 }
 /* END PAGE */
 
 /* TEXT */
-main p{
+.sub-info p{
     font-family: monospace;
-    font-size: 30px;
+    font-size: 20px;
 }
 
-nav a{
+.sub-info h4{
+    font-family: monospace;
+    font-size: 40px;
+    text-align: center;
+    margin:0 auto;
+}
+
+.button{
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.5em;
     text-decoration: none;
     font-weight: bolder;
 }
 
-#welcome h1{
+.title h1{
     font-family: 'Helvetica';
     font-size: 5em;
     color: #1C444F;
@@ -73,10 +102,10 @@ nav a{
 
 #nav-logo{
     height: 80px;
+    margin-top: -5px;
 }
 
 #logo{
-    border-radius: 50%;
     height: 100%;
 }
 
@@ -94,7 +123,7 @@ main{
     position: static;
 }
 
-main div{
+.info{
     display: block;
     background-color: #4876AB;
     border-radius: 10px;
@@ -110,7 +139,7 @@ main .sep{
     width: 100%;
 }
 
-#welcome{
+.title{
     text-align: center;
     background-color: transparent;
     padding: 0;
@@ -121,28 +150,11 @@ main .sep line{
     stroke-width: 3;
 }
 
-.homeinfo #avatar{
-    display: block;
-    margin:0 auto;
-    padding: 30px;
-    padding-top: 0;
-}
-
-.homeinfo div{
+.sub-info{
     background-color: #7EA5CB;
     border-radius: 10px;
     padding: 20px;
     display: inline-block;
     margin:0 auto;
-
-}
-
-.homeinfo #desc{
-    padding: 20px;
-}
-
-#profile{
-    height: 100%;
-    border-radius: 10px;
 }
 /* END MAIN */
