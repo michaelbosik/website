@@ -1,0 +1,83 @@
+<!--Michael Bosik - mbosik
+	Project 2 - Computer Graphics-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Michael Bosik - Project 2</title>
+
+    <script id="vshader" type="x-shader/x-vertex">
+		attribute vec4 vPosition; 
+		attribute vec4 vColor; 
+		varying vec4 fColor;
+		uniform float vPointSize;
+		uniform mat4 projMatrix;
+		uniform mat4 modelMatrix;
+		uniform mat4 viewMatrix;
+
+		void main() { 
+			gl_Position = projMatrix * viewMatrix * modelMatrix * vPosition;
+			gl_PointSize = vPointSize;
+			fColor = vColor;
+		}
+    </script>
+
+    <script id="fshader" type="x-shader/x-fragment">
+		precision mediump float;
+		varying vec4 fColor; 
+				
+		void main() { 
+			gl_FragColor = fColor;
+		}
+    </script>
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/initShaders.js"></script>
+    <script src="lib/MV.js"></script>
+
+	<!--Include my javascript file-->
+	<script src="main.js"></script>
+
+</head>
+
+<body onload="main()">
+	<table>
+		<tr>
+			<td>
+				<canvas id="webgl" width="700" height="700" style="border: solid black">
+					Please use a browser that supports the "canvas" tag.
+				</canvas>
+			</td>
+			<td>
+				<input class='input' type='file' accept='*.ply' onchange='openFile(event)'><br/>
+				<p id="meshCoordinates"></p>
+				<p id="cameraCoordinates"></p>
+				<p id="mode"></p>
+				<p id="speed"></p>
+				<input type="range" min="0" max="100" value="50" class='input' onchange='changeSpeed(value)'>
+			</td>
+			<td style="padding-left: 30px">
+				<h3>Controls</h3>
+				<p>X - Change X (Positive)</br>
+				   C - Change X (Negative)</br>
+				   Y - Change Y (Positive)</br>
+				   U - Change Y (Negative)</br>
+				   Z - Change Z (Positive)</br>
+				   A - Change Z (Negative)</br></p>
+				<p>B - Toggle mesh "breathing"</br>
+				   G - Toggle breathe type between 'norma' and 'dust'</br>
+				   R - Toggle mesh rotation over X axis</br>
+				   N - Toggle movement mode between 'mesh' and 'cam</br>
+				   J - Toggle camera mode between 'static' and follow'</br>
+					   'follow' follows the mesh and 'static' leaves</br>
+					   the camera pointing where it currently is</br></p>
+				<p>Speed of movement for both camera and mesh can be</br>
+				   adjusted with the slider</p>
+			</td>
+		</tr>
+	</table>
+</body>
+
+</html>

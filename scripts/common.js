@@ -1,16 +1,16 @@
 /* Michael Bosik */
 
 /*
- * Adds the "shown" class to the navbar, causing it to open on mobile screens
+ * Show/Hide element
  */
-const showNav = function() {
-    document.getElementById('nav').classList.add("shown");
-}
-  
-/*
- * Removes the "shown" class from the navbar, causing it to close on mobile
- */
-const closeNav = function() {
-    document.getElementById('nav').classList.remove("shown");
-}
+
+ function showHide(element){
+     var x = document.getElementById(element);
+     if(x.style.display === "none"){
+         x.style.display = "block";
+     }
+     else{
+         x.style.display = "none";
+     }
+ }
   

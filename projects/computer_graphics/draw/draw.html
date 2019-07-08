@@ -1,0 +1,63 @@
+<!--Michael Bosik - mbosik
+	Project 1 - Computer Graphics-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>WebGL Example File</title>
+
+    <script id="vshader" type="x-shader/x-vertex">
+		attribute vec4 vPosition; 
+		attribute vec4 vColor; 
+		uniform float vPointSize; 
+		varying vec4 fColor;
+
+		uniform mat4 projMatrix;
+		uniform mat4 modelMatrix;
+
+		void main() { 
+			gl_Position = projMatrix * vPosition * modelMatrix;
+			fColor = vColor;
+		}
+    </script>
+
+    <script id="fshader" type="x-shader/x-fragment">
+		precision mediump float;
+		varying vec4 fColor; 
+				
+		void main() { 
+			gl_FragColor = fColor;
+		}
+    </script>
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/initShaders.js"></script>
+    <script src="lib/MV.js"></script>
+
+	<!--Include my javascript file-->
+	<script src="main.js"></script>
+	
+
+</head>
+
+<body onload="main()">
+
+	<canvas id="webgl" width="800" height="800" style="border: solid black">
+        Please use a browser that supports the "canvas" tag.
+	</canvas>
+
+	<!--All elements displayed in File Mode-->
+	<h1 class='fileMode'>File Mode</h1>
+	<p class='fileMode'>Click on the 'Select File' button to upload a .dat file.<br/>Press 'c' to change the color of the drawing.<br/>Press 'd' to enter draw mode.</p>
+	<input class='fileMode' type='file' accept='*.dat' onchange='openFile(event)'><br/>
+	
+	<!--All elements displayed in Draw Mode-->
+	<h1 class='drawMode' style="display:none">Draw Mode</h1>
+	<p class='drawMode' style="display:none">Click within the square to plot a point. Click again to start drawing line segments.<br/>Press 'c' to change the color of the next plotted point.<br/>Press and hold 'b' when you click so begin a new line segment.<br/>Press 'f' to enter file mode.</p>
+		
+	
+</body>
+
+</html>

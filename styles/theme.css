@@ -8,36 +8,54 @@
  *
  */
 
-/* PAGE */
-html, body{
-    padding: 0;
-    margin: 0;
+* {
+    box-sizing: border-box;
+}
+
+/* Page */
+html{
     background-color: #C6E4DC;
 }
 
 body{
+    background-color: #C6E4DC;
     max-width: 1500px;
     margin:0 auto;
 }
 
+header{
+    width:100%;
+}
+
+/* Buttons */
 .button{
-    padding: 12px;
+    transition: all .2s ease-in;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
     text-decoration: none;
+    font-weight: bolder;
+    padding: 12px;
     color: #1C444F;
+}
+
+.button:hover{
+    color: #4876AB;
+    text-decoration: none;
 }
 
 .button.is-circled{
     transition: all .2s ease-in;
     background-color: transparent;
     border-radius: 25px;
-    border: 3px solid #1C444F;
+    border: 3px solid #4876AB;
+    color: #4876AB;
 }
 
 .button.is-filled{
     transition: all .2s ease-in;
-    background-color: #1C444F;
+    background-color: #4876AB;
     border-radius: 25px;
-    color: #C6E4DC;
+    color: #1C444F;
 }
 
 .button.is-filled:hover{
@@ -46,54 +64,18 @@ body{
 }
 
 .button.is-circled:hover{
-    background-color: #1C444F;
+    background-color: #4876AB;
     color: #C6E4DC;
 }
 
 .button:active, .button.is-circled:active, .button.is-filled:active{
     color: white;
 }
-/* END PAGE */
 
-/* TEXT */
-.sub-info p{
-    font-family: monospace;
-    font-size: 20px;
-}
-
-.sub-info h4{
-    font-family: monospace;
-    font-size: 40px;
-    text-align: center;
-    margin:0 auto;
-}
-
-.button{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.5em;
-    text-decoration: none;
-    font-weight: bolder;
-}
-
-.title h1{
-    font-family: 'Helvetica';
-    font-size: 5em;
-    color: #1C444F;
-}
-/* END TEXT */
-
-/* HEADER */
-nav{
-    overflow: hidden;
-    top: 0;
-    padding: 20px;
-    margin:0 auto;
-}
-
+/* Nav Bar */
 .nav-item{
     display: inline-block;
     margin:0 auto;
-    padding: 0;
 }
 
 nav a{
@@ -113,25 +95,98 @@ nav a{
     margin-top: 25px;
     float: right;
 }
-/* END HEADER */
 
-/* MAIN */
+/* Divs */
 main{
     width:90%;
     margin:0 auto;
-    margin-top: 80px;
-    position: static;
+    display: block;
+}
+
+.title{
+    font-family: 'Open Sans', sans-serif;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    padding: 0;
+}
+
+.title h1{
+    font-size: 5em;
+    color: #1C444F;
+}
+
+.title h2{
+    font-size: 3em;
+    color: #1C444F;
 }
 
 .info{
     display: block;
-    background-color: #4876AB;
+    background-color: #7EA5CB;
     border-radius: 10px;
     min-height: 10px;
-    padding: 20px;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
     margin:0 auto;
 }
 
+.sub-info{
+    border: 3px solid #1C444F;
+    border-radius: 10px;
+}
+
+.sub-info h1, h2, h3, h4, h5, h6, p, i{
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    text-align: center;
+    margin:0 auto;
+}
+
+.sub-info h5{
+    font-size: 25px;
+    color: #4876AB;
+}
+
+.sub-info p{
+    font-size: 20px;
+    color: #1C444F;
+}
+
+.sub-info h4, i{
+    font-size: 40px;
+    color: #1C444F;
+}
+
+.sub-info a{
+    text-decoration: underline;
+    color: #1C444F;
+}
+
+.sub-info a:hover{
+    text-decoration: underline;
+    color: #C6E4DC;
+}
+
+.sub-info.is-filled{
+    background-color: #4876AB;
+}
+
+.sub-info.is-filled p{
+    color: #C6E4DC;
+}
+  
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+/* Other */
 main .sep{
     display: inline-block;
     padding-top: 10px;
@@ -139,22 +194,7 @@ main .sep{
     width: 100%;
 }
 
-.title{
-    text-align: center;
-    background-color: transparent;
-    padding: 0;
-}
-
 main .sep line{
     stroke:#1C444F;
     stroke-width: 3;
 }
-
-.sub-info{
-    background-color: #7EA5CB;
-    border-radius: 10px;
-    padding: 20px;
-    display: inline-block;
-    margin:0 auto;
-}
-/* END MAIN */

@@ -5,32 +5,63 @@
         <link rel="shortcut icon" href="images/brand/icon.png" type="image/x-icon">
         <link rel="stylesheet" href="styles/theme.css" type="text/css">
         <link rel="stylesheet" href="styles/home.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/6998a6816b.js"></script>
-    <!--<meta http-equiv="refresh" content="3">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </head>
-    <body>
-
-        <nav class="nav">
-            <div class="nav-item" id="nav-logo">
-                <a href="index.html"><img src="images/brand/logo.png" id="logo"></a>
-            </div>
-            <div class="nav-item" id="nav-links">
-                <a class="button" href="about.html">About</a>
-                <a class="button is-circled" href="portfolio.html">Portfolio</a>
-            </div>
-        </nav>
-
-        <main>
+    <body class="container-fluid bg-transparent">
+        <header>
+            <nav class="container-fluid">
+                <div class="nav-item" id="nav-logo">
+                    <a href="index.html"><img src="images/brand/logo.png" id="logo"></a>
+                </div>
+                <div class="nav-item" id="nav-links">
+                    <a class="button" href="about.html">About</a>
+                    <a class="button is-circled" href="portfolio.html">Portfolio</a>
+                </div>
+            </nav>
+        </header>
+        
+        <main class="container-fluid">
             <div class="title">
-                <h1>Hi, I'm Michael!</h1>
-            </div>
-            <div class="info">
                 <img id="avatar" src="images/brand/avatar.svg">
-                <div class="sub-info">
-                    <p>
-                    Lorem ipsum dolor sit amet, ea eam nullam legendos, quem erroribus ei est. Cum cu mutat doming quaestio. Magna perfecto quo an, ad ornatus partiendo molestiae per. Natum harum cum et, nam dico movet no. Ipsum deserunt sit ex. Elitr nostrum periculis vel et, ad justo simul duo, sed id nisl corpora. Ne sea soluta diceret tacimates, usu eu maiorum lobortis ullamcorper, graeco consequuntur interpretaris an cum.
-                    Ut pri brute eligendi dissentiunt, nam id vivendum neglegentur consequuntur. Vitae accusata partiendo has ne, duo ei mediocrem consequuntur, ne apeirian invenire omittantur mel. Libris mandamus sapientem te pro, in nec reque nemore feugiat. Ea simul vituperata interpretaris sea. Cum et dolorum offendit indoctum.    
-                    </p>
+                <h1>Hi, I'm Michael!</h1>
+                <h2>Welcome to my website!</h2>
+            </div>
+            <div class="info justify-content-md-center" id="homeinfo">
+                <div class="row">
+                    <div class="col sub-info is-filled">
+                        <p>
+                            I am a junior majoring in Computer Science with a minor in Interactive Media and Game Design (IMGD) at
+                            WPI, seeking a job or internship in the are of front end software, web or game development. I would describe
+                            myself as a leader, adaptive, ambitious, motivated, patient, concentrated and having a willingness to learn and
+                            teach others.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="row justify-content-md-center">
+                    <div class="sub-info web col mr-auto">
+                        <i class="fas fa-laptop-code"></i>
+                        <h4>Education</h4>
+                        <p>Attending Worcester Polytechnic Institute for Bachelors of Computer Science Degree</p>
+                        <h5>Languages I Speak:</h5>
+                        <p>Java, C/C++, Python, JavaScript (React and Node), HTML/CSS, Git, OpenGL, GML, Terminal</p>
+                        <h5>Skills</h5>
+                        <p>Front-end development, game design, computer networks, team building</p>
+                    </div>
+                    <div class="sub-info game col mr-auto">
+                        <i class="fas fa-gamepad"></i>
+                        <h4>Experience</h4>
+                        <p>- <a href="https://www.tracelink.com/" target="__blank"><strong>TraceLink</strong></a> internship - platform development (back-end Java reactive programming) and application development (front-end Javascript programming)</p>
+                        <p>- WPI <a href="https://www.wpi.edu/offices/foisie-innovation-studio/global-lab" target="__blank"><strong>Global Lab</strong></a> instructor - lead trainings involving multimedia equipment for use in student projects</p>
+                        <p>- <a href="https://www.codeninjas.com/locations/ct-trumbull" target="__blank"><strong>Code Ninjas</strong></a> lead instructor - created childrens programming summer camp curriculum and lead camp in learning about javascript development, 3D modeling, and Scratch programming. Worked closely with children and peers</p>
+                    </div>
                 </div>
             </div>
             <!--<svg class="sep"><line x1="0" y1="0" x2="100%" y2="0"/></svg>-->
