@@ -185,16 +185,3 @@ main{
     width: 100%;
   }
 }
-
-/* Other */
-main .sep{
-    display: inline-block;
-    padding-top: 10px;
-    height: 20px;
-    width: 100%;
-}
-
-main .sep line{
-    stroke:#1C444F;
-    stroke-width: 3;
-}
