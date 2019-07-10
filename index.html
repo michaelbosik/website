@@ -1,78 +1,112 @@
+<!--
+   This is a website created by Michael Bosik
+   This website uses Bootstrap components and Google fonts
+-->
+
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Michael Bosik - Home</title>
-        <link rel="shortcut icon" href="images/brand/icon.png" type="image/x-icon">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--Styles-->
-        <link rel="stylesheet" href="styles/theme.css" type="text/css">
-        <link rel="stylesheet" href="styles/home.css" type="text/css">
+   <head>
+      <title>Michael Bosik - Home</title>
+      <link rel="shortcut icon" href="images/brand/icon.png" type="image/x-icon">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--Fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/6998a6816b.js"></script>
-    
-        <!--Bootstrap Imports-->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </head>
+      <!--Styles-->
+      <link rel="stylesheet" href="styles/theme.css" type="text/css">
+      <link rel="stylesheet" href="styles/home.css" type="text/css">
 
-    <body class="container-fluid bg-transparent">
+      <!--Fonts-->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/6998a6816b.js"></script>
 
-        <!--Nav Bar-->
-        <header>
-            <nav class="container-fluid">
-                <div class="nav-item" id="nav-logo">
-                    <a href="index.html"><img src="images/brand/logo.png" id="logo"></a>
-                </div>
-                <div class="nav-item" id="nav-links">
-                    <a class="button" href="about.html">About</a>
-                    <a class="button is-circled" href="portfolio.html">Portfolio</a>
-                </div>
-            </nav>
-        </header>
-        
-        <!--Main Information-->
-        <main class="container-fluid">
-            <div class="title">
-                <img id="avatar" src="images/brand/avatar.svg">
-                <h1>Hi, I'm Michael!</h1>
-                <h2>Welcome to my website!</h2>
+      <!--Bootstrap Imports-->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   </head>
+
+   <body class="container-fluid bg-transparent">
+
+      <!--Nav Bar-->
+      <header>
+         <nav class="container-fluid">
+            <div class="nav-item" id="nav-logo">
+               <a href="index.html"><img src="images/brand/logo.png" id="logo"></a>
             </div>
-            <div class="info justify-content-md-center" id="homeinfo">
-                <div class="row">
-                    <div class="col sub-info is-filled">
-                        <p>
-                            I am a junior majoring in Computer Science with a minor in Interactive Media and Game Design (IMGD) at
-                            WPI, seeking a job or internship in the area of front end software, web or game development. I would describe
-                            myself as a leader, adaptive, ambitious, motivated, patient, concentrated and having a willingness to learn and
-                            teach others.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="row justify-content-md-center">
-                    <div class="sub-info web col mr-auto">
-                        <i class="fas fa-laptop-code"></i>
-                        <h4>Education</h4>
-                        <p>Attending Worcester Polytechnic Institute for Bachelors of Computer Science Degree</p>
-                        <h5>Languages I Speak:</h5>
-                        <p>Java, C/C++, Python, JavaScript (React and Node), HTML/CSS, Git, OpenGL, GML, Terminal</p>
-                        <h5>Skills</h5>
-                        <p>Front-end development, game design, computer networks, team building</p>
-                    </div>
-                    <div class="sub-info game col mr-auto">
-                        <i class="fas fa-gamepad"></i>
-                        <h4>Experience</h4>
-                        <p>- <a href="https://www.tracelink.com/" target="__blank"><strong>TraceLink</strong></a> internship - platform development (back-end Java reactive programming) and application development (front-end Javascript programming)</p>
-                        <p>- WPI <a href="https://www.wpi.edu/offices/foisie-innovation-studio/global-lab" target="__blank"><strong>Global Lab</strong></a> instructor - lead trainings involving multimedia equipment for use in student projects</p>
-                        <p>- <a href="https://www.codeninjas.com/locations/ct-trumbull" target="__blank"><strong>Code Ninjas</strong></a> lead instructor - created childrens programming summer camp curriculum and helped campers learn about javascript development, 3D modeling, and Scratch programming. Worked closely with children and peers</p>
-                    </div>
-                </div>
+            <div class="nav-item" id="nav-links">
+               <a class="button" href="about.html">About</a>
+               <a class="button is-circled" href="portfolio.html">Portfolio</a>
             </div>
-        </main>
-    </body>
+         </nav>
+      </header>
+
+      <!--Main Information-->
+      <main class="container-fluid">
+
+         <div class="title">
+            <img id="avatar" src="images/brand/avatar.svg">
+            <h1>Hi, I'm Michael!</h1>
+            <h2>Welcome to my website!</h2>
+         </div>
+
+         <div class="info justify-content-center" id="homeinfo">
+            <div class="container-fluid">
+
+               <div class="row">
+                  <div class="col sub-info is-filled">
+                     <p>
+                        I am a junior majoring in Computer Science with a minor in Interactive Media and Game Design (IMGD) at
+                        WPI, seeking a job or internship in the area of front end software, web or game development. I would describe
+                        myself as a leader, adaptive, ambitious, motivated, patient, concentrated and having a willingness to learn and
+                        teach others.
+                     </p>
+                  </div>
+               </div>
+
+               <div class="row justify-content-center">
+                  <div class="sub-info web col">
+                     <i class="fas fa-laptop-code"></i>
+                     <h4>Education</h4>
+                     <p>Attending Worcester Polytechnic Institute for Bachelors of Computer Science Degree</p>
+                     <h5>Languages I Speak:</h5>
+                     <p>Java, C/C++, Python, JavaScript (React and Node), HTML/CSS, Git, OpenGL, GML, Terminal</p>
+                     <h5>Skills</h5>
+                     <p>Front-end development, game design, computer networks, team building</p>
+                  </div>
+                  <div class="sub-info game col">
+                     <i class="fas fa-gamepad"></i>
+                     <h4>Experience</h4>
+                     <p>- <a href="https://www.tracelink.com/" target="__blank"><strong>TraceLink</strong></a> internship - platform development (back-end Java reactive programming) and application development (front-end Javascript programming)</p>
+                     <p>- WPI <a href="https://www.wpi.edu/offices/foisie-innovation-studio/global-lab" target="__blank"><strong>Global Lab</strong></a> instructor - lead trainings involving multimedia equipment for use in student projects</p>
+                     <p>- <a href="https://www.codeninjas.com/locations/ct-trumbull" target="__blank"><strong>Code Ninjas</strong></a> lead instructor - created childrens programming summer camp curriculum and helped campers learn about javascript development, 3D modeling, and Scratch programming. Worked closely with children and peers</p>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+         
+      </main>
+
+      <footer>
+         <div class="container">
+            <div class="row justify-content-center">
+               <a href="index.html"><img src="images/brand/logo.png" id="logo"></a>
+            </div>
+            <div class="row justify-content-center">
+               <p><strong>Address:</strong> 100 Institute Rd, Mailbox #517 Worcester, MA 01609</p>
+               <p><strong>Email:</strong> michaelbosik@gmail.com</p>
+            </div>
+            <div class="row justify-content-center">
+               <a href="https://github.com/michaelbosik"><i class="fab fa-github"></i></a>
+               <a href="https://www.youtube.com/michaelbosik"><i class="fab fa-youtube"></i></a>
+               <a href="https://www.linkedin.com/in/michaelbosik/"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="row justify-content-center">
+               <p>This website is a work in progress as a long term project in my free time.</p>
+            </div>
+         </div>
+      </footer>
+
+   </body>
 </html>
