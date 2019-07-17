@@ -17,7 +17,11 @@
 
       <!--Fonts-->
       <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+      <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
       <script src="https://kit.fontawesome.com/6998a6816b.js"></script>
+
+      <!--Scripts-->
+      <script src="scripts/common.js"></script>
 
       <!--Bootstrap Imports-->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -26,7 +30,7 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
    </head>
 
-   <body class="container-fluid bg-transparent">
+   <body onload='loadMain()' class="container-fluid bg-transparent">
 
       <!--Nav Bar-->
       <header>
@@ -42,14 +46,17 @@
       </header>
 
       <!--Main Information-->
-      <main class="container-fluid">
+      <main>
 
          <div class="title">
             <img id="avatar" src="images/brand/avatar.svg">
-            <h1>Hi, I'm Michael!</h1>
-            <h2>Welcome to my website!</h2>
+            <div style="display: inline-block">
+               <h1 id="title1"></h1>
+               <h2 id="title2"></h2>     
+            </div>
          </div>
 
+         <!--         -->
          <div class="info justify-content-center" id="homeinfo">
             <div class="container-fluid">
 
@@ -85,6 +92,7 @@
 
             </div>
          </div>
+
          
       </main>
 

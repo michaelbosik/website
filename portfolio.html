@@ -1,125 +1,167 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Michael Bosik - Portfolio</title>
-        <link rel="shortcut icon" href="images/brand/icon.png" type="image/x-icon">
-        <link rel="stylesheet" href="styles/theme.css" type="text/css">
-        <link rel="stylesheet" href="styles/portfolio.css" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-
-        <script src="scripts/common.js"></script>
-        <script src="https://kit.fontawesome.com/6998a6816b.js"></script>
-        
-        <!-- 3D Mobile Scripts -->
-        <meta charset="utf-8" />
-        <script id="vshader" type="x-shader/x-vertex">
-            uniform mat4 projectionMatrix, modelMatrix;
-            attribute vec4 vColor, vPosition;
-            varying vec4 fColor;
-    
-            uniform vec4 diffuseProduct, ambientProduct, specularProduct;
-            uniform vec4 lightPosition;
-            uniform float shininess;
-            attribute vec4 vNormal;
-    
-            uniform float angle;
-            varying vec3 refl; 
-    
-            attribute vec2 vTexCoord;
-            varying vec2 fTexCoord;
-    
-            void main() {
-                vec3 pos = (modelMatrix * vPosition).xyz;
-                vec3 L = normalize(lightPosition.xyz - pos);
-                vec3 V = normalize(-pos);
-                vec3 N = normalize(modelMatrix * vNormal).xyz;
-                vec3 R = (2.0 * dot(L, N) * N) - L;
-    
-                refl = refract(pos, N, 0.5);
-    
-                float Kd = dot(L, N);
-                float Ks = pow(max(dot(V, R), 0.0), shininess);
-                vec4 ambient = ambientProduct;
-                vec4 diffuse = vec4(0, 0, 0, 0);
-                vec4 specular = vec4(0, 0, 0, 0);
-    
-                vec3 lightDir = normalize(vec3(-1, -1, -6));
-    
-                if(dot(L, -lightDir) > angle){
-                    diffuse = Kd * diffuseProduct;
-                    specular = Ks * specularProduct;
-                }
-    
-                gl_PointSize = 10.0;
-                gl_Position = projectionMatrix * modelMatrix * vPosition;
-                fColor = ambient + diffuse + specular;
-                fColor.a = 1.0;
-        
-                fTexCoord = vTexCoord;
-            }
-        </script>
-        <script id="fshader" type="x-shader/x-fragment">
-            precision mediump float;
-    
-            varying vec4 fColor;
-            varying vec2 fTexCoord;
-            varying vec3 refl;
-            
-            uniform sampler2D tex0;
-            uniform sampler2D tex1;
-            uniform samplerCube texMap;
-    
-            uniform float texType;
-    
-            void main() {
-                gl_FragColor = fColor;
-              }
-        </script>
-        <script src="projects/computer_graphics/mobile/lib/webgl-utils.js"></script>
-        <script src="projects/computer_graphics/mobile/lib/initShaders.js"></script>
-        <script src="projects/computer_graphics/mobile/lib/MV.js"></script>
-        <script src="projects/computer_graphics/mobile/final.js"></script>
-
-        <meta http-equiv="Refresh" content="0; url=wip.html">
-    </head>
-
-    <body onload="main()">
-        <nav class="nav">
+   <head>
+      <title>Michael Bosik - Portfolio</title>
+      <link rel="shortcut icon" href="images/brand/icon.png" type="image/x-icon">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--Styles-->
+      <link rel="stylesheet" href="styles/theme.css" type="text/css">
+      <link rel="stylesheet" href="styles/portfolio.css" type="text/css">
+      <!--Fonts-->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/6998a6816b.js"></script>
+      <!--Bootstrap Imports-->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <!--<meta http-equiv="Refresh" content="0; url=wip.html">-->
+      <!-- 3D Mobile Scripts -->
+      <meta charset="utf-8" />
+      <script id="vshader" type="x-shader/x-vertex">
+         uniform mat4 projectionMatrix, modelMatrix;
+         attribute vec4 vColor, vPosition;
+         varying vec4 fColor;
+         
+         uniform vec4 diffuseProduct, ambientProduct, specularProduct;
+         uniform vec4 lightPosition;
+         uniform float shininess;
+         attribute vec4 vNormal;
+         
+         uniform float angle;
+         varying vec3 refl; 
+         
+         attribute vec2 vTexCoord;
+         varying vec2 fTexCoord;
+         
+         void main() {
+             vec3 pos = (modelMatrix * vPosition).xyz;
+             vec3 L = normalize(lightPosition.xyz - pos);
+             vec3 V = normalize(-pos);
+             vec3 N = normalize(modelMatrix * vNormal).xyz;
+             vec3 R = (2.0 * dot(L, N) * N) - L;
+         
+             refl = refract(pos, N, 0.5);
+         
+             float Kd = dot(L, N);
+             float Ks = pow(max(dot(V, R), 0.0), shininess);
+             vec4 ambient = ambientProduct;
+             vec4 diffuse = vec4(0, 0, 0, 0);
+             vec4 specular = vec4(0, 0, 0, 0);
+         
+             vec3 lightDir = normalize(vec3(-1, -1, -6));
+         
+             if(dot(L, -lightDir) > angle){
+                 diffuse = Kd * diffuseProduct;
+                 specular = Ks * specularProduct;
+             }
+         
+             gl_PointSize = 10.0;
+             gl_Position = projectionMatrix * modelMatrix * vPosition;
+             fColor = ambient + diffuse + specular;
+             fColor.a = 1.0;
+         
+             fTexCoord = vTexCoord;
+         }
+      </script>
+      <script id="fshader" type="x-shader/x-fragment">
+         precision mediump float;
+         
+         varying vec4 fColor;
+         varying vec2 fTexCoord;
+         varying vec3 refl;
+         
+         uniform sampler2D tex0;
+         uniform sampler2D tex1;
+         uniform samplerCube texMap;
+         
+         uniform float texType;
+         
+         void main() {
+             gl_FragColor = fColor;
+           }
+      </script>
+      <script src="projects/computer_graphics/mobile/lib/webgl-utils.js"></script>
+      <script src="projects/computer_graphics/mobile/lib/initShaders.js"></script>
+      <script src="projects/computer_graphics/mobile/lib/MV.js"></script>
+      <script src="projects/computer_graphics/mobile/final.js"></script>
+   </head>
+   <body class="container-fluid bg-transparent" onload="main()">
+      <header>
+         <nav class="container-fluid">
             <div class="nav-item" id="nav-logo">
-                <a href="index.html"><img src="images/brand/logo.png" id="logo"></a>
+               <a href="index.html"><img src="images/brand/logo.png" id="logo"></a>
             </div>
             <div class="nav-item" id="nav-links">
-                <a class="button" href="about.html">About</a>
-                <a class="button is-circled" href="portfolio.html">Portfolio</a>
+               <a class="button" href="about.html">About</a>
+               <a class="button is-circled" href="portfolio.html">Portfolio</a>
             </div>
-        </nav>
-
-        <main>
-            <div class="info">
-                <div class="sub-info" id="resume">
-                    <h4>Resume</h4>
-                    <div id="downloads">
-                        <p>Download:</p>
-                        <a href="files/resume.pdf" download="Bosik_Michael_Resume.pdf" class="button is-filled">PDF <i class="far fa-file-pdf"></i></a>
-                        <a href="files/resume.docx" download="Bosik_Michael_Resume.docx" class="button is-filled">DOCX <i class="far fa-file-word"></i></a>
+         </nav>
+      </header>
+      <main class="container-fluid">
+         <div class="title">
+            <h1>Portfolio</h1>
+         </div>
+         <div class="info" style="margin-top:20px">
+            <div id="accordion">
+                <div class="card sub-info is-filled">
+                    <div class="card-header" id="resume-header">
+                        <h1 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseResume" aria-expanded="true" aria-controls="collapseResume">
+                                Resume
+                            </button>
+                        </h1>
+                    </div>
+                    <div id="collapseResume" class="collapse" aria-labelledby="resume-header" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Downloads</h3>
+                            <div class="col-3" style="text-align: center">
+                                <a href="files/resume.pdf" download="Bosik_Michael_Resume.pdf" class="button"><i class="far fa-file-pdf"></i></a>
+                                <a href="files/resume.docx" download="Bosik_Michael_Resume.docx" class="button"><i class="far fa-file-word"></i></a>
+                            </div>
+                            <embed class="col-lg-6 align-self-center" src="files/resume.pdf" type="application/pdf" height="900px"/>
+                        </div>
                     </div>
                 </div>
-                <svg class="sep"><line x1="0" y1="0" x2="100%" y2="0"/></svg>
-                <div class="sub-info">
-                    <h4>Projects</h4>
-                    <div>
-                        <canvas id="webgl" width="500" height="400">
-                            Please use a browser that supports the "canvas" tag.
-                        </canvas>
-                        <a href="projects/front-end.html#mobile"><h3>Whats this?</h3></a>
-                        <p id='shapes' style="display:none"></p>
-                        <p id='angle' style="display:none"></p>
-                        <p>
-                            This is where my projects will go
-                        </p>
+                <div class="card sub-info bg-transparent mt-3">
+                    <div class="card-header" id="front-end-header">
+                        <h1 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFrontEnd" aria-expanded="true" aria-controls="collapseFrontEnd">
+                                Front-End Projects
+                            </button>
+                        </h1>
+                    </div>
+                    <div id="collapseFrontEnd" class="collapse" aria-labelledby="front-end-header" data-parent="#accordion">
+                        <div class="card-body" id="downloads">
+                            <canvas id="webgl" width="500" height="400">
+                                Please use a browser that supports the "canvas" tag.
+                             </canvas>
+                             <p id='shapes' style="display:none"></p>
+                             <p id='angle' style="display:none"></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </main>
-    </body>
+         </div>
+      </main>
+      <footer>
+         <div class="container">
+            <div class="row justify-content-center">
+               <a href="index.html"><img src="images/brand/logo.png" id="logo"></a>
+            </div>
+            <div class="row justify-content-center">
+               <p><strong>Address:</strong> 100 Institute Rd, Mailbox #517 Worcester, MA 01609</p>
+               <p><strong>Email:</strong> michaelbosik@gmail.com</p>
+            </div>
+            <div class="row justify-content-center">
+               <a href="https://github.com/michaelbosik" target="__blank"><i class="fab fa-github"></i></a>
+               <a href="https://www.youtube.com/michaelbosik" target="__blank"><i class="fab fa-youtube"></i></a>
+               <a href="https://www.linkedin.com/in/michaelbosik/" target="__blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="row justify-content-center">
+               <p>This website is a work in progress as a long term project in my free time. </p>
+            </div>
+         </div>
+      </footer>
+   </body>
 </html>

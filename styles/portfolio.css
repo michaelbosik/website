@@ -1,17 +1,4 @@
-#resume{
-    display: block;
-    width: 800px;
-    max-width: 75%;
-    margin:0 auto;
-    padding: 20px;
-    height: 100%;
-}
-
 #downloads{
-    display: block;
-    margin:0 auto;
-    width: 50%;
-    padding: 10px;
     text-align: center;
 }
 
@@ -20,7 +7,3 @@
     margin:0 auto;
 }
 
-canvas{
-    background-color: black;
-    border-radius: 25%;
-}
