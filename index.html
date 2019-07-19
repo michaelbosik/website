@@ -11,9 +11,12 @@
       <link rel="shortcut icon" href="images/brand/icon.png" type="image/x-icon">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <!--Styles-->
+      <!--Styles
       <link rel="stylesheet" href="styles/theme.css" type="text/css">
       <link rel="stylesheet" href="styles/home.css" type="text/css">
+      -->
+      <link rel="stylesheet" href="styles/main.css" type="text/css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
       <!--Fonts-->
       <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
@@ -22,17 +25,21 @@
 
       <!--Scripts-->
       <script src="scripts/common.js"></script>
-
-      <!--Bootstrap Imports-->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script type="text/javascript">
+         jQuery(document).ready(function(){
+            jQuery('.skillbar').each(function(){
+               jQuery(this).find('.skillbar-bar').animate({
+                  width:jQuery(this).attr('data-percent')
+               },4000);
+            });
+         });
+      </script>
    </head>
 
-   <body onload='loadMain()' class="container-fluid bg-transparent">
+   <body onload='loadMain()'>
 
-      <!--Nav Bar-->
+      <!--Nav Bar
       <header>
          <nav class="container-fluid">
             <div class="nav-item" id="nav-logo">
@@ -44,77 +51,136 @@
             </div>
          </nav>
       </header>
+      -->
 
       <!--Main Information-->
-      <main>
-
-         <div class="title">
-            <img id="avatar" src="images/brand/avatar.svg">
-            <div style="display: inline-block">
-               <h1 id="title1"></h1>
-               <h2 id="title2"></h2>     
+         <div class="welcome">
+            <div class="content">
+               <img src="images/brand/avatar.svg">
+               <div class="titles">
+                  <h1 class="mt-3" id="title1"></h1>
+                  <h2 id="title2"></h2>     
+               </div>
+               <a id="mainBtn" href="#info">Portfolio</a>
             </div>
          </div>
 
-         <!--         -->
-         <div class="info justify-content-center" id="homeinfo">
-            <div class="container-fluid">
-
-               <div class="row">
-                  <div class="col sub-info is-filled">
-                     <p>
-                        I am a junior majoring in Computer Science with a minor in Interactive Media and Game Development (IMGD) at
-                        WPI, seeking a job or internship in the area of front end software, web or game development. I would describe
-                        myself as a leader, adaptive, ambitious, motivated, patient, concentrated and having a willingness to learn and
-                        teach others.
-                     </p>
+         <div class="info" id="info">
+            <div class="about">
+               <div class="container">
+                  <h1 class="fadein">Experience</h1>
+                  <div class="row justify-content-center experiences">
+                     <div class="col-lg-3 col-md-6 col-12 fadein">
+                        <div class="imgWrapper">
+                           <img src="images/about/codeninjasleadership.png">
+                        </div>
+                        <h3>Code Ninjas</h3>
+                        <p>Designed curriculum for childrens coding based summer camp.</p>
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-12 fadein">
+                        <div class="imgWrapper">
+                           <img src="images/about/betathetafries.png">
+                        </div>
+                        <h3>Beta Theta Pi</h3>
+                        <p>Brotherhood, philanthropy, community and self improvement.</p>
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-12 fadein">
+                        <div class="imgWrapper">
+                           <img src="images/about/tracelink.png" alt="Tracelink Photo">
+                        </div>
+                        <h3>TraceLink</h3>
+                        <p>Start-up internship. Back-end event handling and QA testing.</p>
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-12 fadein">
+                        <div class="imgWrapper">
+                           <img src="images/about/csexample.png">
+                        </div>
+                        <h3>Hackathons</h3>
+                        <p>Front-end projects: javascript web-app, unity game, search engine.</p>
+                     </div>
+                  </div>
+                  <div class="row justify-content-center">
+                     <div class="col-lg-6 col-md-12 self fadein">
+                        <div class="imgWrapper">
+                           <img src="images/brand/profile.png">
+                        </div>
+                        <h3>About Me</h3>
+                        <p>I am a Junior at Worcester Polytechnic Institute. </br>
+                           I have a passion for front-end design: </br>
+                           websites, games, and videos.</p>
+                     </div>
+                     <div class="col-lg-6 col-md-12 skills fadein">
+                        <h3>Skills</h3>
+                        <div class="skillbar clearfix" data-percent="85%">
+                           <div class="skillbar-title"><span>HMTL</span></div>
+                           <div class="skillbar-bar"></div>
+                           <div class="skillbar-percent">85%</div>
+                        </div>
+                        <div class="skillbar clearfix" data-percent="80%">
+                           <div class="skillbar-title"><span>CSS/SCSS</span></div>
+                           <div class="skillbar-bar"></div>
+                           <div class="skillbar-percent">80%</div>
+                        </div>
+                        <div class="skillbar clearfix" data-percent="70%">
+                           <div class="skillbar-title"><span>Node.js</span></div>
+                           <div class="skillbar-bar"></div>
+                           <div class="skillbar-percent">70%</div>
+                        </div>
+                        <div class="skillbar clearfix" data-percent="50%">
+                           <div class="skillbar-title"><span>React</span></div>
+                           <div class="skillbar-bar"></div>
+                           <div class="skillbar-percent">50%</div>
+                        </div>
+                        <div class="skillbar clearfix" data-percent="90%">
+                           <div class="skillbar-title"><span>Java</span></div>
+                           <div class="skillbar-bar"></div>
+                           <div class="skillbar-percent">90%</div>
+                        </div>
+                        <div class="skillbar clearfix" data-percent="70%">
+                           <div class="skillbar-title"><span>C/C++</span></div>
+                           <div class="skillbar-bar"></div>
+                           <div class="skillbar-percent">70%</div>
+                        </div>
+                        <div class="skillbar clearfix" data-percent="60%">
+                           <div class="skillbar-title"><span>OpenGL/WebGL</span></div>
+                           <div class="skillbar-bar"></div>
+                           <div class="skillbar-percent">60%</div>
+                        </div>
+                        <div class="skillbar clearfix" data-percent="85%">
+                           <div class="skillbar-title"><span>Premiere/Vegas</span></div>
+                           <div class="skillbar-bar"></div>
+                           <div class="skillbar-percent">85%</div>
+                        </div>
+                        <div class="skillbar clearfix" data-percent="45%">
+                           <div class="skillbar-title"><span>Illustrator/PS</span></div>
+                           <div class="skillbar-bar"></div>
+                           <div class="skillbar-percent">45%</div>
+                        </div>
+                        <div class="skillbar clearfix" data-percent="90%">
+                           <div class="skillbar-title"><span>Organization</span></div>
+                           <div class="skillbar-bar"></div>
+                           <div class="skillbar-percent">90%</div>
+                        </div>
+                     </div>
                   </div>
                </div>
-
-               <div class="row justify-content-center">
-                  <div class="sub-info web col">
-                     <i class="fas fa-laptop-code"></i>
-                     <h4>Education</h4>
-                     <p>Attending Worcester Polytechnic Institute for Bachelors of Computer Science Degree</p>
-                     <h5>Languages I Speak:</h5>
-                     <p>Java, C/C++, Python, JavaScript (React and Node), HTML/CSS, Git, OpenGL, GML, Terminal</p>
-                     <h5>Skills</h5>
-                     <p>Front-end development, game design, computer networks, team building</p>
-                  </div>
-                  <div class="sub-info game col">
-                     <i class="fas fa-gamepad"></i>
-                     <h4>Experience</h4>
-                     <p>- <a href="https://www.tracelink.com/" target="__blank"><strong>TraceLink</strong></a> internship - platform development (back-end Java reactive programming) and application development (front-end Javascript programming)</p>
-                     <p>- WPI <a href="https://www.wpi.edu/offices/foisie-innovation-studio/global-lab" target="__blank"><strong>Global Lab</strong></a> instructor - lead trainings involving multimedia equipment for use in student projects</p>
-                     <p>- <a href="https://www.codeninjas.com/locations/ct-trumbull" target="__blank"><strong>Code Ninjas</strong></a> lead instructor - created childrens programming summer camp curriculum and helped campers learn about javascript development, 3D modeling, and Scratch programming. Worked closely with children and peers</p>
-                  </div>
-               </div>
+            </div>
+            <div class="portfolio">
 
             </div>
          </div>
 
-         
-      </main>
-
-      <footer>
-         <div class="container">
-            <div class="row justify-content-center">
-               <a href="index.html"><img src="images/brand/logo.png" id="logo"></a>
-            </div>
-            <div class="row justify-content-center">
-               <p><strong>Address:</strong> 100 Institute Rd, Mailbox #517 Worcester, MA 01609</p>
-               <p><strong>Email:</strong> michaelbosik@gmail.com</p>
-            </div>
+         <div class="contact">
+            <a href="index.html"><img src="images/brand/logo.png"></a>
+            <p><strong>Address:</strong> 100 Institute Rd, Mailbox #517 Worcester, MA 01609</p>
+            <p><strong>Email:</strong> michaelbosik@gmail.com</p>
             <div class="row justify-content-center">
                <a href="https://github.com/michaelbosik" target="__blank"><i class="fab fa-github"></i></a>
                <a href="https://www.youtube.com/michaelbosik" target="__blank"><i class="fab fa-youtube"></i></a>
                <a href="https://www.linkedin.com/in/michaelbosik/" target="__blank"><i class="fab fa-linkedin"></i></a>
             </div>
-            <div class="row justify-content-center">
-               <p>This website is a work in progress as a long term project in my free time.</p>
-            </div>
+            <p>This website is a work in progress as a long term project in my free time.</p>
          </div>
-      </footer>
 
    </body>
 </html>

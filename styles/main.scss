@@ -1,0 +1,268 @@
+$font-stack: 'Source Sans Pro', sans-serif;
+
+$theme-colors: (
+  "primary": #1C444F,
+  "secondary": #4876AB,
+  "background": #C6E4DC,
+  "dark": #000000,
+  "light": #e8f1ff
+);
+
+html{
+    background-color: map-get($theme-colors, "background"); 
+    scroll-behavior: smooth; 
+}
+
+.fadein {
+    opacity: 0;
+    transform: translate(-40px, 0px);
+    transition: transform 2s, opacity 2s;
+}
+
+.visible{
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: transform 2s, opacity 2s ease-in;
+}
+
+.welcome{
+    background-color: map-get($theme-colors, "background");
+    color: map-get($theme-colors, "primary");
+    font: 100% $font-stack;
+
+    margin:0 auto;
+    display: block;
+    min-height: 100vh;
+
+    .content{
+        text-align: center;
+        margin-top: 20vh;
+        img {display:block; margin:0 auto;}
+        .titles{
+            display: inline-block;
+            h1 {font-size: 25px;}
+            h2 {font-size: 20px;}
+        }
+        #mainBtn{
+            color: map-get($theme-colors, "primary");
+            background: map-get($theme-colors, "background");
+            border: 3px solid map-get($theme-colors, "primary");
+            border-radius: 2px;
+
+            position: relative;
+            display: block;
+            margin:0 auto;
+            margin-top: 10px;
+
+            text-decoration: none;
+            font-size: 18px;
+            width: 270px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: bold;
+            padding: 14px 0px;
+        
+            opacity: 0;
+            animation: fadein 3s;
+            animation-delay: 3.5s;
+            animation-fill-mode: forwards;
+
+            &:hover {
+                transition: 0.2s all ease;
+                background: map-get($theme-colors, "secondary");
+                color: map-get($theme-colors, "light");
+            }
+        }
+    } 
+}
+
+.info{
+    background-color: map-get($theme-colors, "light");
+    margin:0 auto;
+    display: block;
+    min-height: 100vh;
+    width: 100%;
+    font: $font-stack;
+    text-align: center;
+    h1{
+        color: map-get($theme-colors, "primary");
+        font-size: 50px;
+        padding: 20px;
+    }
+    h3{
+        color: map-get($theme-colors, "secondary");
+        font-size: 30px;
+        padding-top: 10px;
+    }
+    p{
+        color: map-get($theme-colors, "primary");
+        font-size: 20px;
+    }
+    .imgWrapper{
+        margin:0 auto;
+        overflow: hidden;
+    }
+}
+
+.experiences{
+    .imgWrapper{
+        transition: 0.5s all ease;
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        &:hover{
+            transition: 0.5s all ease;
+            border-radius: 30%;
+        }
+    }
+    img{
+        margin:0 auto;
+        margin-left: -25%;
+        height: 100%;
+        width: auto;
+    }
+}
+
+.self{
+    padding-top: 20px;
+    .imgWrapper{
+        border-radius: 30%; 
+    }
+    img{
+        margin:0 auto;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.skills{
+    padding-top: 10px;
+    .skillbar {
+        position:relative;
+        display:block;
+        margin-bottom:15px;
+        width:100%;
+        background:#ffffff;
+        height:35px;
+        border-radius:3px;
+        -moz-border-radius:3px;
+        -webkit-border-radius:3px;
+        -webkit-transition:0.4s linear;
+        -moz-transition:0.4s linear;
+        -ms-transition:0.4s linear;
+        -o-transition:0.4s linear;
+        transition:0.4s linear;
+        -webkit-transition-property:width, background-color;
+        -moz-transition-property:width, background-color;
+        -ms-transition-property:width, background-color;
+        -o-transition-property:width, background-color;
+        transition-property:width, background-color;
+    }
+    
+    .skillbar-title {
+        position:absolute;
+        top:0;
+        left:0;
+        width:130px;
+        font-weight:bold;
+        font-size:13px;
+        color:#ffffff;
+        background: map-get($theme-colors, "secondary");
+        -webkit-border-top-left-radius:3px;
+        -webkit-border-bottom-left-radius:4px;
+        -moz-border-radius-topleft:3px;
+        -moz-border-radius-bottomleft:3px;
+        border-top-left-radius:3px;
+        border-bottom-left-radius:3px;
+        span{
+            display:block;
+            background:rgba(0, 0, 0, 0.1);
+            padding:0 10px;
+            height:35px;
+            line-height:35px;
+            -webkit-border-top-left-radius:3px;
+            -webkit-border-bottom-left-radius:3px;
+            -moz-border-radius-topleft:3px;
+            -moz-border-radius-bottomleft:3px;
+            border-top-left-radius:3px;
+            border-bottom-left-radius:3px;
+        }
+    }
+    
+    .skillbar-bar {
+        height:35px;
+        width:0px;
+        background: map-get($theme-colors, "primary");
+        border-radius:3px;
+        -moz-border-radius:3px;
+        -webkit-border-radius:3px;
+    }
+    
+    .skillbar-percent {
+        position:absolute;
+        right:10px;
+        top:0;
+        font-size:14px;
+        height:35px;
+        line-height:35px;
+        color:#ffffff;
+        color:rgba(0, 0, 0, 0.4);
+    }
+}
+
+.contact{
+    text-align: center;
+    background-color: map-get($theme-colors, "secondary");
+    margin:0 auto;
+    display: block;
+    padding: 20px;
+    i{
+        padding: 20px;
+        font-size: 3em;
+        color: map-get($theme-colors, "primary");
+    }
+    img{height: 80px;}
+}
+
+@media screen and (min-width:530px){
+    .welcome .content .titles {
+        h1 {font-size: 35px;}
+        h2 {font-size: 30px;}
+    }
+    .self {
+        .imgWrapper { 
+            height: 200px;
+            width: 200px;
+        }
+    } 
+}
+  
+@media screen and (min-width:800px) {
+    .welcome .content .titles {
+        h1 {font-size: 45px;}
+        h2 {font-size: 40px;}
+    }
+    .self {
+        .imgWrapper { 
+            height: 400px;
+            width: 400px;
+        }
+    }
+}
+  
+@media screen and (min-width:1000px) {
+    .welcome .content .titles {
+        h1 {font-size: 55px;}
+        h2 {font-size: 50px;}
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
