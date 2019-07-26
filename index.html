@@ -17,6 +17,7 @@
       -->
       <link rel="stylesheet" href="styles/main.css" type="text/css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
       <!--Fonts-->
       <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
@@ -26,32 +27,25 @@
       <!--Scripts-->
       <script src="scripts/common.js"></script>
       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script type="text/javascript">
-         jQuery(document).ready(function(){
-            jQuery('.skillbar').each(function(){
-               jQuery(this).find('.skillbar-bar').animate({
-                  width:jQuery(this).attr('data-percent')
-               },4000);
+         $(document).ready(function(){
+            $(window).scroll(function(){
+               $('.skillbar').each(function(i){
+                  var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                  var bottom_of_window = $(window).scrollTop() + $(window).height();
+                  if( bottom_of_window > bottom_of_object ){
+                     $(this).find('.skillbar-bar').animate({
+                        width:$(this).attr('data-percent')
+                     },4000);
+                  }
+               });
             });
          });
       </script>
    </head>
 
-   <body onload='loadMain()'>
-
-      <!--Nav Bar
-      <header>
-         <nav class="container-fluid">
-            <div class="nav-item" id="nav-logo">
-               <a href="index.html"><img src="images/brand/logo.png" id="logo"></a>
-            </div>
-            <div class="nav-item" id="nav-links">
-               <a class="button" href="about.html">About</a>
-               <a class="button is-circled" href="portfolio.html">Portfolio</a>
-            </div>
-         </nav>
-      </header>
-      -->
+   <body onload='loadMain(), AOS.init()'>
 
       <!--Main Information-->
          <div class="welcome">
@@ -68,30 +62,30 @@
          <div class="info" id="info">
             <div class="about">
                <div class="container">
-                  <h1 class="fadein">Experience</h1>
+                  <h1 data-aos="fade-right" data-aos-duration="1500">Experience</h1>
                   <div class="row justify-content-center experiences">
-                     <div class="col-lg-3 col-md-6 col-12 fadein">
+                     <div class="col-lg-3 col-md-6 col-6" data-aos="fade-right" data-aos-duration="1000">
                         <div class="imgWrapper">
                            <img src="images/about/codeninjasleadership.png">
                         </div>
                         <h3>Code Ninjas</h3>
                         <p>Designed curriculum for childrens coding based summer camp.</p>
                      </div>
-                     <div class="col-lg-3 col-md-6 col-12 fadein">
+                     <div class="col-lg-3 col-md-6 col-6" data-aos="fade-right" data-aos-duration="1200">
                         <div class="imgWrapper">
                            <img src="images/about/betathetafries.png">
                         </div>
                         <h3>Beta Theta Pi</h3>
                         <p>Brotherhood, philanthropy, community and self improvement.</p>
                      </div>
-                     <div class="col-lg-3 col-md-6 col-12 fadein">
+                     <div class="col-lg-3 col-md-6 col-6" data-aos="fade-right" data-aos-duration="1400">
                         <div class="imgWrapper">
                            <img src="images/about/tracelink.png" alt="Tracelink Photo">
                         </div>
                         <h3>TraceLink</h3>
                         <p>Start-up internship. Back-end event handling and QA testing.</p>
                      </div>
-                     <div class="col-lg-3 col-md-6 col-12 fadein">
+                     <div class="col-lg-3 col-md-6 col-6" data-aos="fade-right" data-aos-duration="1600">
                         <div class="imgWrapper">
                            <img src="images/about/csexample.png">
                         </div>
@@ -100,7 +94,7 @@
                      </div>
                   </div>
                   <div class="row justify-content-center">
-                     <div class="col-lg-6 col-md-12 self fadein">
+                     <div class="col-lg-6 col-md-12 self" data-aos="fade-right" data-aos-duration="1800">
                         <div class="imgWrapper">
                            <img src="images/brand/profile.png">
                         </div>
@@ -109,12 +103,12 @@
                            I have a passion for front-end design: </br>
                            websites, games, and videos.</p>
                      </div>
-                     <div class="col-lg-6 col-md-12 skills fadein">
+                     <div class="col-lg-6 col-md-12 skills" data-aos="fade-right" data-aos-duration="2000">
                         <h3>Skills</h3>
-                        <div class="skillbar clearfix" data-percent="85%">
+                        <div class="skillbar clearfix" data-percent="95%">
                            <div class="skillbar-title"><span>HMTL</span></div>
                            <div class="skillbar-bar"></div>
-                           <div class="skillbar-percent">85%</div>
+                           <div class="skillbar-percent">95%</div>
                         </div>
                         <div class="skillbar clearfix" data-percent="80%">
                            <div class="skillbar-title"><span>CSS/SCSS</span></div>
@@ -131,10 +125,10 @@
                            <div class="skillbar-bar"></div>
                            <div class="skillbar-percent">50%</div>
                         </div>
-                        <div class="skillbar clearfix" data-percent="90%">
+                        <div class="skillbar clearfix" data-percent="85%">
                            <div class="skillbar-title"><span>Java</span></div>
                            <div class="skillbar-bar"></div>
-                           <div class="skillbar-percent">90%</div>
+                           <div class="skillbar-percent">85%</div>
                         </div>
                         <div class="skillbar clearfix" data-percent="70%">
                            <div class="skillbar-title"><span>C/C++</span></div>
@@ -166,7 +160,101 @@
                </div>
             </div>
             <div class="portfolio">
-
+               <div class="container">
+                  <h1 data-aos="fade-right" data-aos-duration="1500">Projects</h1>
+                  <div class="row justify-content-center">
+                     <div class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="images/projects/thumbnails/clearvue.png">
+                        <div class="hovercover">
+                           <h4>Clear Vue</h4>
+                           <h5>HTML, CSS, Node.JS, Git</h5>
+                           <div class="learnmore">
+                              <a href="wip.html" target="__blank">Learn More</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1400">
+                        <img src="images/about/csexample.png" alt="graphics">
+                        <div class="hovercover">
+                           <h4>WebGL Projects</h4>
+                           <h5>OpenGL, JavaScript, HTML, Shaders</h5>
+                           <div class="learnmore">
+                              <a href="wip.html" target="__blank">Learn More</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1800">
+                        <img src="images/projects/thumbnails/solarsystem.png">
+                        <div class="hovercover">
+                           <h4>In-Browser VR</h4>
+                           <h5>AFrame, HTML, CSS</h5>
+                           <div class="learnmore">
+                              <a href="wip.html" target="__blank">Learn More</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="images/projects/thumbnails/website.png">
+                        <div class="hovercover">
+                           <h4>This Website</h4>
+                           <h5>HTML, CSS, SASS, JavaScript, Git</h5>
+                           <div class="learnmore">
+                              <a href="wip.html" target="__blank">Learn More</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1400">
+                        <img src="images/projects/thumbnails/alone.png">
+                        <div class="hovercover">
+                           <h4>Alone</h4>
+                           <h5>Unity, Git, C#, Photoshop</h5>
+                           <div class="learnmore">
+                              <a href="wip.html" target="__blank">Learn More</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1800">
+                        <img src="images/about/csexample.png">
+                        <div class="hovercover">
+                           <h4>The Legend of Gompeii</h4>
+                           <h5>Game Maker, GML, Photoshop</h5>
+                           <div class="learnmore">
+                              <a href="wip.html" target="__blank">Learn More</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="images/about/csexample.png">
+                        <div class="hovercover">
+                           <h4>Ireiterum</h4>
+                           <h5>Dragonfly, C++, Git, Event Handling</h5>
+                           <div class="learnmore">
+                              <a href="wip.html" target="__blank">Learn More</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1400">
+                        <img src="images/projects/thumbnails/gamelevel.png">
+                        <div class="hovercover">
+                           <h4>Unreal Tournament Level</h4>
+                           <h5>Unreal Engine, Autodesk Maya</h5>
+                           <div class="learnmore">
+                              <a href="wip.html" target="__blank">Learn More</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1800">
+                        <img src="images/projects/thumbnails/seedsofstem.png">
+                        <div class="hovercover">
+                           <h4>Seeds of Stem</h4>
+                           <h5>Sony Vegas</h5>
+                           <div class="learnmore">
+                              <a href="wip.html" target="__blank">Learn More</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
          </div>
 

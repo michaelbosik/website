@@ -5,7 +5,9 @@
  */
 
  function loadMain(){
-    typeWriter(0, "title1", "<h1>Hi, Im Michael!</h1>"); 
+    document.getElementById("title1").style.fontFamily = "Menlo";
+    document.getElementById("title2").style.fontFamily = "Menlo";
+    typeWriter(0, "title1", "<h1>Hi, I'm Michael!</h1>");
     setTimeout(typeWriter, 1500, 0, "title2", "<h2>Welcome to my website!</h2>", 0);
   }
 
@@ -13,25 +15,10 @@
     if (i < txt.length) {
       document.getElementById(id).innerHTML += txt.charAt(i);
       setTimeout(typeWriter, 50, ++i, id, txt);
+    } else {
+      txt = txt.substring(txt.indexOf(">")+1, txt.indexOf("</"));
+      document.getElementById(id).innerHTML = "";
+      document.getElementById(id).innerHTML = txt;
+      document.getElementById(id).style.fontFamily = "Source Sans Pro";
     }
   }
-
-  function makeVisible(tag){
-    let pageTop = window.scrollY;
-    let pageBottom = pageTop + window.innerHeight;
-
-    if (tag.offsetTop < pageBottom) {
-      tag.classList.add('visible');
-    }
-  }
-
-const fadein = () => { 
-    let i = 0;
-    let tags = document.getElementsByClassName('fadein');
-    for (let tag of tags) {
-      setTimeout(makeVisible, i, tag);
-      i+=200;
-    }
-  }
-  
-  window.addEventListener('scroll', (e) => fadein());

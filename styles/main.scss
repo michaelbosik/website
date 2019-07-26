@@ -4,6 +4,7 @@ $theme-colors: (
   "primary": #1C444F,
   "secondary": #4876AB,
   "background": #C6E4DC,
+  "light-background": #7ab8ff,
   "dark": #000000,
   "light": #e8f1ff
 );
@@ -11,18 +12,6 @@ $theme-colors: (
 html{
     background-color: map-get($theme-colors, "background"); 
     scroll-behavior: smooth; 
-}
-
-.fadein {
-    opacity: 0;
-    transform: translate(-40px, 0px);
-    transition: transform 2s, opacity 2s;
-}
-
-.visible{
-    opacity: 1;
-    transform: translate(0, 0);
-    transition: transform 2s, opacity 2s ease-in;
 }
 
 .welcome{
@@ -36,8 +25,12 @@ html{
 
     .content{
         text-align: center;
-        margin-top: 20vh;
-        img {display:block; margin:0 auto;}
+        margin-top: 15%;
+        img {
+            display: block;
+            margin:0 auto;
+            width: 200px;
+        }
         .titles{
             display: inline-block;
             h1 {font-size: 25px;}
@@ -78,7 +71,6 @@ html{
 }
 
 .info{
-    background-color: map-get($theme-colors, "light");
     margin:0 auto;
     display: block;
     min-height: 100vh;
@@ -87,127 +79,225 @@ html{
     text-align: center;
     h1{
         color: map-get($theme-colors, "primary");
-        font-size: 50px;
-        padding: 20px;
+        font-size: 30px;
+        padding-bottom: 20px;
     }
     h3{
         color: map-get($theme-colors, "secondary");
-        font-size: 30px;
+        font-size: 18px;
         padding-top: 10px;
     }
     p{
         color: map-get($theme-colors, "primary");
-        font-size: 20px;
+        font-size: 10px;
     }
     .imgWrapper{
         margin:0 auto;
         overflow: hidden;
+        height: 100px;
+        width: 100px;
     }
 }
 
-.experiences{
-    .imgWrapper{
-        transition: 0.5s all ease;
-        border-radius: 50%;
-        height: 200px;
-        width: 200px;
-        &:hover{
+.about{
+    background-color: map-get($theme-colors, "light");
+    padding: 20px;
+    .experiences{
+        .imgWrapper{
             transition: 0.5s all ease;
-            border-radius: 30%;
+            border-radius: 50%;
+            &:hover{
+                transition: 0.5s all ease;
+                border-radius: 30%;
+            }
+        }
+        img{
+            margin:0 auto;
+            margin-left: -25%;
+            height: 100%;
+            width: auto;
+        }
+    } 
+    .self{
+        padding-top: 20px;
+        .imgWrapper{
+            border-radius: 30%; 
+        }
+        img{
+            margin:0 auto;
+            width: 100%;
+            height: auto;
         }
     }
-    img{
-        margin:0 auto;
-        margin-left: -25%;
-        height: 100%;
-        width: auto;
-    }
-}
-
-.self{
-    padding-top: 20px;
-    .imgWrapper{
-        border-radius: 30%; 
-    }
-    img{
-        margin:0 auto;
-        width: 100%;
-        height: auto;
-    }
-}
-
-.skills{
-    padding-top: 10px;
-    .skillbar {
-        position:relative;
-        display:block;
-        margin-bottom:15px;
-        width:100%;
-        background:#ffffff;
-        height:35px;
-        border-radius:3px;
-        -moz-border-radius:3px;
-        -webkit-border-radius:3px;
-        -webkit-transition:0.4s linear;
-        -moz-transition:0.4s linear;
-        -ms-transition:0.4s linear;
-        -o-transition:0.4s linear;
-        transition:0.4s linear;
-        -webkit-transition-property:width, background-color;
-        -moz-transition-property:width, background-color;
-        -ms-transition-property:width, background-color;
-        -o-transition-property:width, background-color;
-        transition-property:width, background-color;
-    }
-    
-    .skillbar-title {
-        position:absolute;
-        top:0;
-        left:0;
-        width:130px;
-        font-weight:bold;
-        font-size:13px;
-        color:#ffffff;
-        background: map-get($theme-colors, "secondary");
-        -webkit-border-top-left-radius:3px;
-        -webkit-border-bottom-left-radius:4px;
-        -moz-border-radius-topleft:3px;
-        -moz-border-radius-bottomleft:3px;
-        border-top-left-radius:3px;
-        border-bottom-left-radius:3px;
-        span{
+    .skills{
+        padding-top: 10px;
+        .skillbar {
+            position:relative;
             display:block;
-            background:rgba(0, 0, 0, 0.1);
-            padding:0 10px;
+            margin-bottom:15px;
+            width:100%;
+            background:#ffffff;
             height:35px;
-            line-height:35px;
+            border-radius:3px;
+            -moz-border-radius:3px;
+            -webkit-border-radius:3px;
+            -webkit-transition:0.4s linear;
+            -moz-transition:0.4s linear;
+            -ms-transition:0.4s linear;
+            -o-transition:0.4s linear;
+            transition:0.4s linear;
+            -webkit-transition-property:width, background-color;
+            -moz-transition-property:width, background-color;
+            -ms-transition-property:width, background-color;
+            -o-transition-property:width, background-color;
+            transition-property:width, background-color;
+        }
+        
+        .skillbar-title {
+            position:absolute;
+            top:0;
+            left:0;
+            font-weight:bold;
+            color:#ffffff;
+            background: map-get($theme-colors, "secondary");
             -webkit-border-top-left-radius:3px;
-            -webkit-border-bottom-left-radius:3px;
+            -webkit-border-bottom-left-radius:4px;
             -moz-border-radius-topleft:3px;
             -moz-border-radius-bottomleft:3px;
             border-top-left-radius:3px;
             border-bottom-left-radius:3px;
+            span{
+                display:block;
+                background:rgba(0, 0, 0, 0.1);
+                padding:0 10px;
+                height:35px;
+                line-height:35px;
+                -webkit-border-top-left-radius:3px;
+                -webkit-border-bottom-left-radius:3px;
+                -moz-border-radius-topleft:3px;
+                -moz-border-radius-bottomleft:3px;
+                border-top-left-radius:3px;
+                border-bottom-left-radius:3px;
+            }
+        }
+        
+        .skillbar-bar {
+            height:35px;
+            width:0px;
+            background: map-get($theme-colors, "primary");
+            border-radius:3px;
+            -moz-border-radius:3px;
+            -webkit-border-radius:3px;
+        }
+        
+        .skillbar-percent {
+            position:absolute;
+            right:10px;
+            top:0;
+            font-size:14px;
+            height:35px;
+            line-height:35px;
+            color:#ffffff;
+            color:rgba(0, 0, 0, 0.4);
         }
     }
-    
-    .skillbar-bar {
-        height:35px;
-        width:0px;
-        background: map-get($theme-colors, "primary");
-        border-radius:3px;
-        -moz-border-radius:3px;
-        -webkit-border-radius:3px;
-    }
-    
-    .skillbar-percent {
-        position:absolute;
-        right:10px;
-        top:0;
-        font-size:14px;
-        height:35px;
-        line-height:35px;
-        color:#ffffff;
-        color:rgba(0, 0, 0, 0.4);
+}
+
+.portfolio{
+    background: map-get($theme-colors, "light-background");
+    padding: 20px;
+    .project{
+        margin:0 auto;
+        &.imgWrapper{
+            height: 250px;
+            width: 100%;
+            padding:0;
+            img{
+                background-size: cover;
+                margin-left: -60%;
+                height: 100%;
+                width: auto;
+                position: absolute;
+            }
+            .hovercover{
+                background: map-get($theme-colors, "background");
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                opacity: 0;
+                transition: opacity 0.25s ease-in;
+                h4, h5{
+                    transform: translate(0px, -10px);
+                    opacity: 0;
+                    transition: transform 0.25s, opacity 0.2s;
+                    font-family: $font-stack;
+                }
+                h4{ 
+                    color: map-get($theme-colors, "primary");
+                    font-size: 30px;
+                }
+                h5{ 
+                    color: map-get($theme-colors, "secondary");
+                    font-size: 20px;
+                }
+                .learnmore{
+                    transform: translate(0px, 120px);
+                    opacity: 0;
+                    transition: transform 0.25s, opacity 0.2s;
+
+                    color: map-get($theme-colors, "primary");
+                    background: map-get($theme-colors, "background");
+                    border: 3px solid map-get($theme-colors, "primary");
+                    border-radius: 2px;
+
+                    position: relative;
+                    display: inline-block;
+                    margin:0 auto;
+                    width: 160px;
+                    height: 50px;
+
+                    a{
+                        color: map-get($theme-colors, "primary");
+                        text-decoration: none;
+                        font-size: 18px;
+                        display: block;
+                        position: absolute;
+                        left: 0px;
+                        width: 100%;
+                        height: 100%;
+                        padding: 8px;
+                        z-index: 2;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        text-align: center;
+                        font-weight: bold;
+                    }
+
+                    &:hover {
+                        opacity: 1;
+                        transition: 0.2s all ease;
+                        background: map-get($theme-colors, "secondary");
+                        color: map-get($theme-colors, "light");
+                    }
+                }
+            }
+            &:hover{
+                .hovercover{
+                    opacity: 0.85;
+                    transition: opacity 0.15s ease-in;
+                    h4, h5{
+                        transform: translate(0px, 20px);
+                        opacity: 1;
+                        transition: transform 0.25s, opacity 0.2s;
+                    }
+                    .learnmore{
+                        transform: translate(0px, 90px);
+                        opacity: 1;
+                        transition: transform 0.25s, opacity 0.2s;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -225,23 +315,67 @@ html{
     img{height: 80px;}
 }
 
+@media screen and (min-width: 0){
+    .skillbar .skillbar-title {
+        font-size: 8px;
+    }
+}
+
 @media screen and (min-width:530px){
     .welcome .content .titles {
         h1 {font-size: 35px;}
         h2 {font-size: 30px;}
+    }
+    .info {
+        h1 {font-size: 40px;}
+    }
+    .experiences, .self {
+        .imgWrapper {
+            height: 150px;
+            width: 150px;
+        }
+        h3 {font-size: 20px;}
+        p {font-size: 15px;}
     }
     .self {
         .imgWrapper { 
             height: 200px;
             width: 200px;
         }
-    } 
+    }
+    .project{
+        &.imgWrapper{
+            .img{
+                background-position: -50px 0;
+            }
+        }
+    }
+    .skillbar .skillbar-title {
+        font-size: 10px;
+        width: 100px;
+    }
 }
   
-@media screen and (min-width:800px) {
-    .welcome .content .titles {
-        h1 {font-size: 45px;}
-        h2 {font-size: 40px;}
+@media screen and (min-width:768px) {
+    .welcome .content {
+        .titles {
+            h1 {font-size: 45px;}
+            h2 {font-size: 40px;}
+        }
+        img {
+            width: 250px;
+        }
+    }
+    .info {
+        h1 {font-size: 50px;}
+    }
+    .experiences, .self {
+        .imgWrapper {
+            height: 200px;
+            width: 200px;
+        }
+        h3 {font-size: 25px;}
+        p {font-size: 15px;}
     }
     .self {
         .imgWrapper { 
@@ -249,20 +383,39 @@ html{
             width: 400px;
         }
     }
+    .project{
+        &.imgWrapper{
+            .img{
+                background-position: 0 0;
+            }
+        }
+    }
+    .skillbar .skillbar-title {
+        font-size: 12px;
+        width: 120px;
+    }
 }
   
 @media screen and (min-width:1000px) {
-    .welcome .content .titles {
+    .welcome .content {
+        .titles {
+            h1 {font-size: 55px;}
+            h2 {font-size: 50px;}
+        }
+        img {
+            width: 300px;
+        }
+    }
+    .info {
         h1 {font-size: 55px;}
-        h2 {font-size: 50px;}
+    }
+    .experiences, .self {
+        h3 {font-size: 25px;}
+        p {font-size: 15px;}
     }
 }
 
 @keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
+    from { opacity:0; }
+    to { opacity:1; }
 }

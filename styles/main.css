@@ -3,18 +3,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.fadein {
-  opacity: 0;
-  transform: translate(-40px, 0px);
-  transition: transform 2s, opacity 2s;
-}
-
-.visible {
-  opacity: 1;
-  transform: translate(0, 0);
-  transition: transform 2s, opacity 2s ease-in;
-}
-
 .welcome {
   background-color: #C6E4DC;
   color: #1C444F;
@@ -25,11 +13,12 @@ html {
 }
 .welcome .content {
   text-align: center;
-  margin-top: 20vh;
+  margin-top: 15%;
 }
 .welcome .content img {
   display: block;
   margin: 0 auto;
+  width: 200px;
 }
 .welcome .content .titles {
   display: inline-block;
@@ -69,7 +58,6 @@ html {
 }
 
 .info {
-  background-color: #e8f1ff;
   margin: 0 auto;
   display: block;
   min-height: 100vh;
@@ -79,56 +67,58 @@ html {
 }
 .info h1 {
   color: #1C444F;
-  font-size: 50px;
-  padding: 20px;
+  font-size: 30px;
+  padding-bottom: 20px;
 }
 .info h3 {
   color: #4876AB;
-  font-size: 30px;
+  font-size: 18px;
   padding-top: 10px;
 }
 .info p {
   color: #1C444F;
-  font-size: 20px;
+  font-size: 10px;
 }
 .info .imgWrapper {
   margin: 0 auto;
   overflow: hidden;
+  height: 100px;
+  width: 100px;
 }
 
-.experiences .imgWrapper {
+.about {
+  background-color: #e8f1ff;
+  padding: 20px;
+}
+.about .experiences .imgWrapper {
   transition: 0.5s all ease;
   border-radius: 50%;
-  height: 200px;
-  width: 200px;
 }
-.experiences .imgWrapper:hover {
+.about .experiences .imgWrapper:hover {
   transition: 0.5s all ease;
   border-radius: 30%;
 }
-.experiences img {
+.about .experiences img {
   margin: 0 auto;
   margin-left: -25%;
   height: 100%;
   width: auto;
 }
-
-.self {
+.about .self {
   padding-top: 20px;
 }
-.self .imgWrapper {
+.about .self .imgWrapper {
   border-radius: 30%;
 }
-.self img {
+.about .self img {
   margin: 0 auto;
   width: 100%;
   height: auto;
 }
-
-.skills {
+.about .skills {
   padding-top: 10px;
 }
-.skills .skillbar {
+.about .skills .skillbar {
   position: relative;
   display: block;
   margin-bottom: 15px;
@@ -149,13 +139,11 @@ html {
   -o-transition-property: width, background-color;
   transition-property: width, background-color;
 }
-.skills .skillbar-title {
+.about .skills .skillbar-title {
   position: absolute;
   top: 0;
   left: 0;
-  width: 130px;
   font-weight: bold;
-  font-size: 13px;
   color: #ffffff;
   background: #4876AB;
   -webkit-border-top-left-radius: 3px;
@@ -165,7 +153,7 @@ html {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
-.skills .skillbar-title span {
+.about .skills .skillbar-title span {
   display: block;
   background: rgba(0, 0, 0, 0.1);
   padding: 0 10px;
@@ -178,7 +166,7 @@ html {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
-.skills .skillbar-bar {
+.about .skills .skillbar-bar {
   height: 35px;
   width: 0px;
   background: #1C444F;
@@ -186,7 +174,7 @@ html {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
 }
-.skills .skillbar-percent {
+.about .skills .skillbar-percent {
   position: absolute;
   right: 10px;
   top: 0;
@@ -195,6 +183,98 @@ html {
   line-height: 35px;
   color: #ffffff;
   color: rgba(0, 0, 0, 0.4);
+}
+
+.portfolio {
+  background: #7ab8ff;
+  padding: 20px;
+}
+.portfolio .project {
+  margin: 0 auto;
+}
+.portfolio .project.imgWrapper {
+  height: 250px;
+  width: 100%;
+  padding: 0;
+}
+.portfolio .project.imgWrapper img {
+  background-size: cover;
+  margin-left: -60%;
+  height: 100%;
+  width: auto;
+  position: absolute;
+}
+.portfolio .project.imgWrapper .hovercover {
+  background: #C6E4DC;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.25s ease-in;
+}
+.portfolio .project.imgWrapper .hovercover h4, .portfolio .project.imgWrapper .hovercover h5 {
+  transform: translate(0px, -10px);
+  opacity: 0;
+  transition: transform 0.25s, opacity 0.2s;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.portfolio .project.imgWrapper .hovercover h4 {
+  color: #1C444F;
+  font-size: 30px;
+}
+.portfolio .project.imgWrapper .hovercover h5 {
+  color: #4876AB;
+  font-size: 20px;
+}
+.portfolio .project.imgWrapper .hovercover .learnmore {
+  transform: translate(0px, 120px);
+  opacity: 0;
+  transition: transform 0.25s, opacity 0.2s;
+  color: #1C444F;
+  background: #C6E4DC;
+  border: 3px solid #1C444F;
+  border-radius: 2px;
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  width: 160px;
+  height: 50px;
+}
+.portfolio .project.imgWrapper .hovercover .learnmore a {
+  color: #1C444F;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  z-index: 2;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+.portfolio .project.imgWrapper .hovercover .learnmore:hover {
+  opacity: 1;
+  transition: 0.2s all ease;
+  background: #4876AB;
+  color: #e8f1ff;
+}
+.portfolio .project.imgWrapper:hover .hovercover {
+  opacity: 0.85;
+  transition: opacity 0.15s ease-in;
+}
+.portfolio .project.imgWrapper:hover .hovercover h4, .portfolio .project.imgWrapper:hover .hovercover h5 {
+  transform: translate(0px, 20px);
+  opacity: 1;
+  transition: transform 0.25s, opacity 0.2s;
+}
+.portfolio .project.imgWrapper:hover .hovercover .learnmore {
+  transform: translate(0px, 90px);
+  opacity: 1;
+  transition: transform 0.25s, opacity 0.2s;
 }
 
 .contact {
@@ -213,6 +293,11 @@ html {
   height: 80px;
 }
 
+@media screen and (min-width: 0) {
+  .skillbar .skillbar-title {
+    font-size: 8px;
+  }
+}
 @media screen and (min-width: 530px) {
   .welcome .content .titles h1 {
     font-size: 35px;
@@ -221,22 +306,73 @@ html {
     font-size: 30px;
   }
 
+  .info h1 {
+    font-size: 40px;
+  }
+
+  .experiences .imgWrapper, .self .imgWrapper {
+    height: 150px;
+    width: 150px;
+  }
+  .experiences h3, .self h3 {
+    font-size: 20px;
+  }
+  .experiences p, .self p {
+    font-size: 15px;
+  }
+
   .self .imgWrapper {
     height: 200px;
     width: 200px;
   }
+
+  .project.imgWrapper .img {
+    background-position: -50px 0;
+  }
+
+  .skillbar .skillbar-title {
+    font-size: 10px;
+    width: 100px;
+  }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
   .welcome .content .titles h1 {
     font-size: 45px;
   }
   .welcome .content .titles h2 {
     font-size: 40px;
   }
+  .welcome .content img {
+    width: 250px;
+  }
+
+  .info h1 {
+    font-size: 50px;
+  }
+
+  .experiences .imgWrapper, .self .imgWrapper {
+    height: 200px;
+    width: 200px;
+  }
+  .experiences h3, .self h3 {
+    font-size: 25px;
+  }
+  .experiences p, .self p {
+    font-size: 15px;
+  }
 
   .self .imgWrapper {
     height: 400px;
     width: 400px;
+  }
+
+  .project.imgWrapper .img {
+    background-position: 0 0;
+  }
+
+  .skillbar .skillbar-title {
+    font-size: 12px;
+    width: 120px;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -245,6 +381,20 @@ html {
   }
   .welcome .content .titles h2 {
     font-size: 50px;
+  }
+  .welcome .content img {
+    width: 300px;
+  }
+
+  .info h1 {
+    font-size: 55px;
+  }
+
+  .experiences h3, .self h3 {
+    font-size: 25px;
+  }
+  .experiences p, .self p {
+    font-size: 15px;
   }
 }
 @keyframes fadein {
