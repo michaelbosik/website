@@ -10,21 +10,12 @@
       <title>Michael Bosik - Home</title>
       <link rel="shortcut icon" href="images/brand/icon.png" type="image/x-icon">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-      <!--Styles
-      <link rel="stylesheet" href="styles/theme.css" type="text/css">
-      <link rel="stylesheet" href="styles/home.css" type="text/css">
-      -->
       <link rel="stylesheet" href="styles/main.css" type="text/css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-      <!--Fonts-->
       <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
       <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
       <script src="https://kit.fontawesome.com/6998a6816b.js"></script>
-
-      <!--Scripts-->
       <script src="scripts/common.js"></script>
       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -34,10 +25,12 @@
                $('.skillbar').each(function(i){
                   var bottom_of_object = $(this).offset().top + $(this).outerHeight();
                   var bottom_of_window = $(window).scrollTop() + $(window).height();
-                  if( bottom_of_window > bottom_of_object ){
+                  if( bottom_of_window > bottom_of_object && $(this).attr('notFilled')){
                      $(this).find('.skillbar-bar').animate({
                         width:$(this).attr('data-percent')
                      },4000);
+                     console.log("filled bar");
+                     $(this).attr('notFilled', 'false');
                   }
                });
             });
@@ -94,6 +87,9 @@
                      </div>
                   </div>
                   <div class="row justify-content-center">
+                     <div class="col-lg-12" data-aos="fade-right" data-aos-duration="1700">
+                        <h2>Download my resume <a href="files/Bosik_Michael_Resume.pdf" download="Bosik_Michael_Resume" target="__blank"><strong>here</strong></a></h2>
+                     </div>
                      <div class="col-lg-6 col-md-12 self" data-aos="fade-right" data-aos-duration="1800">
                         <div class="imgWrapper">
                            <img src="images/brand/profile.png">
@@ -105,52 +101,52 @@
                      </div>
                      <div class="col-lg-6 col-md-12 skills" data-aos="fade-right" data-aos-duration="2000">
                         <h3>Skills</h3>
-                        <div class="skillbar clearfix" data-percent="95%">
+                        <div class="skillbar clearfix" data-percent="95%" notFilled="true">
                            <div class="skillbar-title"><span>HMTL</span></div>
                            <div class="skillbar-bar"></div>
                            <div class="skillbar-percent">95%</div>
                         </div>
-                        <div class="skillbar clearfix" data-percent="80%">
+                        <div class="skillbar clearfix" data-percent="80%" notFilled="true">
                            <div class="skillbar-title"><span>CSS/SCSS</span></div>
                            <div class="skillbar-bar"></div>
                            <div class="skillbar-percent">80%</div>
                         </div>
-                        <div class="skillbar clearfix" data-percent="70%">
+                        <div class="skillbar clearfix" data-percent="70%" notFilled="true">
                            <div class="skillbar-title"><span>Node.js</span></div>
                            <div class="skillbar-bar"></div>
                            <div class="skillbar-percent">70%</div>
                         </div>
-                        <div class="skillbar clearfix" data-percent="50%">
+                        <div class="skillbar clearfix" data-percent="50%" notFilled="true">
                            <div class="skillbar-title"><span>React</span></div>
                            <div class="skillbar-bar"></div>
                            <div class="skillbar-percent">50%</div>
                         </div>
-                        <div class="skillbar clearfix" data-percent="85%">
+                        <div class="skillbar clearfix" data-percent="85%" notFilled="true">
                            <div class="skillbar-title"><span>Java</span></div>
                            <div class="skillbar-bar"></div>
                            <div class="skillbar-percent">85%</div>
                         </div>
-                        <div class="skillbar clearfix" data-percent="70%">
+                        <div class="skillbar clearfix" data-percent="70%" notFilled="true">
                            <div class="skillbar-title"><span>C/C++</span></div>
                            <div class="skillbar-bar"></div>
                            <div class="skillbar-percent">70%</div>
                         </div>
-                        <div class="skillbar clearfix" data-percent="60%">
+                        <div class="skillbar clearfix" data-percent="60%" notFilled="true">
                            <div class="skillbar-title"><span>OpenGL/WebGL</span></div>
                            <div class="skillbar-bar"></div>
                            <div class="skillbar-percent">60%</div>
                         </div>
-                        <div class="skillbar clearfix" data-percent="85%">
+                        <div class="skillbar clearfix" data-percent="85%" notFilled="true">
                            <div class="skillbar-title"><span>Premiere/Vegas</span></div>
                            <div class="skillbar-bar"></div>
                            <div class="skillbar-percent">85%</div>
                         </div>
-                        <div class="skillbar clearfix" data-percent="45%">
+                        <div class="skillbar clearfix" data-percent="45%" notFilled="true">
                            <div class="skillbar-title"><span>Illustrator/PS</span></div>
                            <div class="skillbar-bar"></div>
                            <div class="skillbar-percent">45%</div>
                         </div>
-                        <div class="skillbar clearfix" data-percent="90%">
+                        <div class="skillbar clearfix" data-percent="90%" notFilled="true">
                            <div class="skillbar-title"><span>Organization</span></div>
                            <div class="skillbar-bar"></div>
                            <div class="skillbar-percent">90%</div>
@@ -169,17 +165,17 @@
                            <h4>Clear Vue</h4>
                            <h5>HTML, CSS, Node.JS, Git</h5>
                            <div class="learnmore">
-                              <a href="wip.html" target="__blank">Learn More</a>
+                              <a href="http://clearvue.info" target="__blank"><i class="fas fa-external-link-alt"></i> View Site</a>
                            </div>
                         </div>
                      </div>
                      <div class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1400">
-                        <img src="images/about/csexample.png" alt="graphics">
+                        <img src="images/projects/thumbnails/webgl.png" alt="graphics">
                         <div class="hovercover">
                            <h4>WebGL Projects</h4>
                            <h5>OpenGL, JavaScript, HTML, Shaders</h5>
                            <div class="learnmore">
-                              <a href="wip.html" target="__blank">Learn More</a>
+                              <a href="https://michaelbosik.github.io/computergraphics/" target="__blank"><i class="fas fa-external-link-alt"></i> View Live</a>
                            </div>
                         </div>
                      </div>

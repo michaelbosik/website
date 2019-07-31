@@ -13,7 +13,7 @@ html {
 }
 .welcome .content {
   text-align: center;
-  margin-top: 15%;
+  margin-top: 10%;
 }
 .welcome .content img {
   display: block;
@@ -70,6 +70,11 @@ html {
   font-size: 30px;
   padding-bottom: 20px;
 }
+.info h2 {
+  color: #1C444F;
+  font-size: 25px;
+  padding: 10px;
+}
 .info h3 {
   color: #4876AB;
   font-size: 18px;
@@ -78,6 +83,9 @@ html {
 .info p {
   color: #1C444F;
   font-size: 10px;
+}
+.info a, .info a:hover {
+  text-decoration: none;
 }
 .info .imgWrapper {
   margin: 0 auto;
@@ -187,7 +195,8 @@ html {
 
 .portfolio {
   background: #7ab8ff;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .portfolio .project {
   margin: 0 auto;
@@ -237,15 +246,15 @@ html {
   position: relative;
   display: inline-block;
   margin: 0 auto;
-  width: 160px;
+  width: 180px;
   height: 50px;
 }
 .portfolio .project.imgWrapper .hovercover .learnmore a {
   color: #1C444F;
   text-decoration: none;
   font-size: 18px;
-  display: block;
   position: absolute;
+  display: inline-block;
   left: 0px;
   width: 100%;
   height: 100%;
@@ -255,6 +264,12 @@ html {
   text-transform: uppercase;
   text-align: center;
   font-weight: bold;
+}
+.portfolio .project.imgWrapper .hovercover .learnmore i {
+  color: #1C444F;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
 }
 .portfolio .project.imgWrapper .hovercover .learnmore:hover {
   opacity: 1;
@@ -309,15 +324,18 @@ html {
   .info h1 {
     font-size: 40px;
   }
+  .info h2 {
+    font-size: 30px;
+  }
 
-  .experiences .imgWrapper, .self .imgWrapper {
+  .experiences .imgWrapper {
     height: 150px;
     width: 150px;
   }
-  .experiences h3, .self h3 {
+  .experiences h3 {
     font-size: 20px;
   }
-  .experiences p, .self p {
+  .experiences p {
     font-size: 15px;
   }
 
@@ -348,6 +366,9 @@ html {
 
   .info h1 {
     font-size: 50px;
+  }
+  .info h2 {
+    font-size: 35px;
   }
 
   .experiences .imgWrapper, .self .imgWrapper {
@@ -388,6 +409,9 @@ html {
 
   .info h1 {
     font-size: 55px;
+  }
+  .info h2 {
+    font-size: 35px;
   }
 
   .experiences h3, .self h3 {

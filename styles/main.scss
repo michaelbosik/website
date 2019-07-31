@@ -25,7 +25,7 @@ html{
 
     .content{
         text-align: center;
-        margin-top: 15%;
+        margin-top: 10%;
         img {
             display: block;
             margin:0 auto;
@@ -82,6 +82,11 @@ html{
         font-size: 30px;
         padding-bottom: 20px;
     }
+    h2{
+        color:map-get($theme-colors, "primary");
+        font-size: 25px;
+        padding: 10px;
+    }
     h3{
         color: map-get($theme-colors, "secondary");
         font-size: 18px;
@@ -90,6 +95,9 @@ html{
     p{
         color: map-get($theme-colors, "primary");
         font-size: 10px;
+    }
+    a, a:hover{
+        text-decoration: none;
     }
     .imgWrapper{
         margin:0 auto;
@@ -205,7 +213,8 @@ html{
 
 .portfolio{
     background: map-get($theme-colors, "light-background");
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     .project{
         margin:0 auto;
         &.imgWrapper{
@@ -253,15 +262,15 @@ html{
                     position: relative;
                     display: inline-block;
                     margin:0 auto;
-                    width: 160px;
+                    width: 180px;
                     height: 50px;
 
                     a{
                         color: map-get($theme-colors, "primary");
                         text-decoration: none;
                         font-size: 18px;
-                        display: block;
                         position: absolute;
+                        display: inline-block;
                         left: 0px;
                         width: 100%;
                         height: 100%;
@@ -271,6 +280,13 @@ html{
                         text-transform: uppercase;
                         text-align: center;
                         font-weight: bold;
+                    }
+
+                    i{
+                        color: map-get($theme-colors, "primary");
+                        text-decoration: none;
+                        font-size: 18px;
+                        display: inline-block;
                     }
 
                     &:hover {
@@ -328,8 +344,9 @@ html{
     }
     .info {
         h1 {font-size: 40px;}
+        h2 {font-size: 30px;}
     }
-    .experiences, .self {
+    .experiences{
         .imgWrapper {
             height: 150px;
             width: 150px;
@@ -368,6 +385,7 @@ html{
     }
     .info {
         h1 {font-size: 50px;}
+        h2 {font-size: 35px;}
     }
     .experiences, .self {
         .imgWrapper {
@@ -408,6 +426,7 @@ html{
     }
     .info {
         h1 {font-size: 55px;}
+        h2 {font-size: 35px;}
     }
     .experiences, .self {
         h3 {font-size: 25px;}
