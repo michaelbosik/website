@@ -1,7 +1,6 @@
 html {
   background-color: #C6E4DC;
-  scroll-behavior: smooth;
-}
+  scroll-behavior: smooth; }
 
 .welcome {
   background-color: #C6E4DC;
@@ -9,53 +8,45 @@ html {
   font: 100% "Source Sans Pro", sans-serif;
   margin: 0 auto;
   display: block;
-  min-height: 100vh;
-}
-.welcome .content {
-  text-align: center;
-  margin-top: 10%;
-}
-.welcome .content img {
-  display: block;
-  margin: 0 auto;
-  width: 200px;
-}
-.welcome .content .titles {
-  display: inline-block;
-}
-.welcome .content .titles h1 {
-  font-size: 25px;
-}
-.welcome .content .titles h2 {
-  font-size: 20px;
-}
-.welcome .content #mainBtn {
-  color: #1C444F;
-  background: #C6E4DC;
-  border: 3px solid #1C444F;
-  border-radius: 2px;
-  position: relative;
-  display: block;
-  margin: 0 auto;
-  margin-top: 10px;
-  text-decoration: none;
-  font-size: 18px;
-  width: 270px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: bold;
-  padding: 14px 0px;
-  opacity: 0;
-  animation: fadein 3s;
-  animation-delay: 3.5s;
-  animation-fill-mode: forwards;
-}
-.welcome .content #mainBtn:hover {
-  transition: 0.2s all ease;
-  background: #4876AB;
-  color: #e8f1ff;
-}
+  min-height: 100vh; }
+  .welcome .content {
+    text-align: center;
+    margin-top: 30px; }
+    .welcome .content img {
+      display: block;
+      margin: 0 auto;
+      width: 200px; }
+    .welcome .content .titles {
+      display: inline-block; }
+      .welcome .content .titles h1 {
+        font-size: 25px; }
+      .welcome .content .titles h2 {
+        font-size: 20px; }
+    .welcome .content #mainBtn {
+      color: #1C444F;
+      background: #C6E4DC;
+      border: 3px solid #1C444F;
+      border-radius: 2px;
+      position: relative;
+      display: block;
+      margin: 0 auto;
+      margin-top: 10px;
+      text-decoration: none;
+      font-size: 18px;
+      width: 270px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: bold;
+      padding: 14px 0px;
+      opacity: 0;
+      animation: fadein 3s;
+      animation-delay: 3.5s;
+      animation-fill-mode: forwards; }
+      .welcome .content #mainBtn:hover {
+        transition: 0.2s all ease;
+        background: #4876AB;
+        color: #e8f1ff; }
 
 .info {
   margin: 0 auto;
@@ -63,371 +54,301 @@ html {
   min-height: 100vh;
   width: 100%;
   font: "Source Sans Pro", sans-serif;
-  text-align: center;
-}
-.info h1 {
-  color: #1C444F;
-  font-size: 30px;
-  padding-bottom: 20px;
-}
-.info h2 {
-  color: #1C444F;
-  font-size: 25px;
-  padding: 10px;
-}
-.info h3 {
-  color: #4876AB;
-  font-size: 18px;
-  padding-top: 10px;
-}
-.info p {
-  color: #1C444F;
-  font-size: 10px;
-}
-.info a, .info a:hover {
-  text-decoration: none;
-}
-.info .imgWrapper {
-  margin: 0 auto;
-  overflow: hidden;
-  height: 100px;
-  width: 100px;
-}
+  text-align: center; }
+  .info h1 {
+    color: #1C444F;
+    font-size: 30px;
+    padding-bottom: 20px; }
+  .info h2 {
+    color: #1C444F;
+    font-size: 25px;
+    padding: 10px; }
+  .info h3 {
+    color: #4876AB;
+    font-size: 18px;
+    padding-top: 10px; }
+  .info h4 {
+    color: #4876AB;
+    font-size: 18px;
+    padding-top: 5px; }
+  .info p {
+    color: #1C444F;
+    font-size: 10px; }
+  .info a, .info a:hover {
+    text-decoration: none; }
+  .info .imgWrapper {
+    margin: 0 auto;
+    overflow: hidden;
+    height: 100px;
+    width: 100px; }
 
 .about {
   background-color: #e8f1ff;
-  padding: 20px;
-}
-.about .experiences .imgWrapper {
-  transition: 0.5s all ease;
-  border-radius: 50%;
-}
-.about .experiences .imgWrapper:hover {
-  transition: 0.5s all ease;
-  border-radius: 30%;
-}
-.about .experiences img {
-  margin: 0 auto;
-  margin-left: -25%;
-  height: 100%;
-  width: auto;
-}
-.about .self {
-  padding-top: 20px;
-}
-.about .self .imgWrapper {
-  border-radius: 30%;
-}
-.about .self img {
-  margin: 0 auto;
-  width: 100%;
-  height: auto;
-}
-.about .skills {
-  padding-top: 10px;
-}
-.about .skills .skillbar {
-  position: relative;
-  display: block;
-  margin-bottom: 15px;
-  width: 100%;
-  background: #ffffff;
-  height: 35px;
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -webkit-transition: 0.4s linear;
-  -moz-transition: 0.4s linear;
-  -ms-transition: 0.4s linear;
-  -o-transition: 0.4s linear;
-  transition: 0.4s linear;
-  -webkit-transition-property: width, background-color;
-  -moz-transition-property: width, background-color;
-  -ms-transition-property: width, background-color;
-  -o-transition-property: width, background-color;
-  transition-property: width, background-color;
-}
-.about .skills .skillbar-title {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-weight: bold;
-  color: #ffffff;
-  background: #4876AB;
-  -webkit-border-top-left-radius: 3px;
-  -webkit-border-bottom-left-radius: 4px;
-  -moz-border-radius-topleft: 3px;
-  -moz-border-radius-bottomleft: 3px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-.about .skills .skillbar-title span {
-  display: block;
-  background: rgba(0, 0, 0, 0.1);
-  padding: 0 10px;
-  height: 35px;
-  line-height: 35px;
-  -webkit-border-top-left-radius: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -moz-border-radius-topleft: 3px;
-  -moz-border-radius-bottomleft: 3px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-.about .skills .skillbar-bar {
-  height: 35px;
-  width: 0px;
-  background: #1C444F;
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-}
-.about .skills .skillbar-percent {
-  position: absolute;
-  right: 10px;
-  top: 0;
-  font-size: 14px;
-  height: 35px;
-  line-height: 35px;
-  color: #ffffff;
-  color: rgba(0, 0, 0, 0.4);
-}
+  padding: 20px; }
+  .about .experiences .imgWrapper {
+    transition: 0.5s all ease;
+    border-radius: 50%; }
+    .about .experiences .imgWrapper:hover {
+      transition: 0.5s all ease;
+      border-radius: 30%; }
+  .about .experiences img {
+    margin: 0 auto;
+    margin-left: -25%;
+    height: 100%;
+    width: auto; }
+  .about .self {
+    padding-top: 20px; }
+    .about .self .imgWrapper {
+      border-radius: 30%; }
+    .about .self img {
+      margin: 0 auto;
+      width: 100%;
+      height: auto; }
+  .about .resume {
+    padding-top: 15px; }
+    .about .resume iframe {
+      width: 100%; }
 
 .portfolio {
   background: #7ab8ff;
   padding-top: 20px;
-  padding-bottom: 20px;
-}
-.portfolio .project {
-  margin: 0 auto;
-}
-.portfolio .project.imgWrapper {
-  height: 250px;
-  width: 100%;
-  padding: 0;
-}
-.portfolio .project.imgWrapper img {
-  background-size: cover;
-  margin-left: -60%;
-  height: 100%;
-  width: auto;
-  position: absolute;
-}
-.portfolio .project.imgWrapper .hovercover {
-  background: #C6E4DC;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  opacity: 0;
-  transition: opacity 0.25s ease-in;
-}
-.portfolio .project.imgWrapper .hovercover h4, .portfolio .project.imgWrapper .hovercover h5 {
-  transform: translate(0px, -10px);
-  opacity: 0;
-  transition: transform 0.25s, opacity 0.2s;
-  font-family: "Source Sans Pro", sans-serif;
-}
-.portfolio .project.imgWrapper .hovercover h4 {
-  color: #1C444F;
-  font-size: 30px;
-}
-.portfolio .project.imgWrapper .hovercover h5 {
-  color: #4876AB;
-  font-size: 20px;
-}
-.portfolio .project.imgWrapper .hovercover .learnmore {
-  transform: translate(0px, 120px);
-  opacity: 0;
-  transition: transform 0.25s, opacity 0.2s;
-  color: #1C444F;
-  background: #C6E4DC;
-  border: 3px solid #1C444F;
-  border-radius: 2px;
-  position: relative;
-  display: inline-block;
-  margin: 0 auto;
-  width: 180px;
-  height: 50px;
-}
-.portfolio .project.imgWrapper .hovercover .learnmore a {
-  color: #1C444F;
-  text-decoration: none;
-  font-size: 18px;
-  position: absolute;
-  display: inline-block;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  padding: 8px;
-  z-index: 2;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: bold;
-}
-.portfolio .project.imgWrapper .hovercover .learnmore i {
-  color: #1C444F;
-  text-decoration: none;
-  font-size: 18px;
-  display: inline-block;
-}
-.portfolio .project.imgWrapper .hovercover .learnmore:hover {
-  opacity: 1;
-  transition: 0.2s all ease;
-  background: #4876AB;
-  color: #e8f1ff;
-}
-.portfolio .project.imgWrapper:hover .hovercover {
-  opacity: 0.85;
-  transition: opacity 0.15s ease-in;
-}
-.portfolio .project.imgWrapper:hover .hovercover h4, .portfolio .project.imgWrapper:hover .hovercover h5 {
-  transform: translate(0px, 20px);
-  opacity: 1;
-  transition: transform 0.25s, opacity 0.2s;
-}
-.portfolio .project.imgWrapper:hover .hovercover .learnmore {
-  transform: translate(0px, 90px);
-  opacity: 1;
-  transition: transform 0.25s, opacity 0.2s;
-}
+  padding-bottom: 20px; }
+  .portfolio .modal .modal-content {
+    background-color: #C6E4DC; }
+    .portfolio .modal .modal-content .modal-header {
+      padding-bottom: 0; }
+      .portfolio .modal .modal-content .modal-header h5 {
+        color: #1C444F; }
+    .portfolio .modal .modal-content .modal-body {
+      padding-bottom: 0; }
+      .portfolio .modal .modal-content .modal-body .carousel {
+        border: 3px solid #4876AB;
+        border-radius: 20px;
+        overflow: hidden;
+        margin: auto; }
+      .portfolio .modal .modal-content .modal-body p {
+        padding-top: 10px;
+        font-size: 15px; }
+    .portfolio .modal .modal-content .modal-footer .modal-btn {
+      color: #1C444F;
+      background: #C6E4DC;
+      border: 3px solid #1C444F;
+      border-radius: 2px;
+      position: relative;
+      float: left;
+      width: 160px;
+      height: 50px; }
+      .portfolio .modal .modal-content .modal-footer .modal-btn a {
+        color: #1C444F;
+        text-decoration: none;
+        font-size: 15px;
+        position: absolute;
+        display: inline-block;
+        padding: 10px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold; }
+      .portfolio .modal .modal-content .modal-footer .modal-btn i {
+        color: #1C444F;
+        text-decoration: none;
+        font-size: 18px; }
+      .portfolio .modal .modal-content .modal-footer .modal-btn:hover {
+        opacity: 1;
+        transition: 0.2s all ease;
+        background: #4876AB;
+        color: #e8f1ff; }
+  .portfolio .project {
+    margin: 0 auto; }
+    .portfolio .project.imgWrapper {
+      height: 250px;
+      width: 100%;
+      padding: 0; }
+      .portfolio .project.imgWrapper img {
+        background-size: cover;
+        margin-left: -60%;
+        height: 100%;
+        width: auto;
+        position: absolute; }
+      .portfolio .project.imgWrapper .hovercover {
+        background: #C6E4DC;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.25s ease-in; }
+        .portfolio .project.imgWrapper .hovercover h4, .portfolio .project.imgWrapper .hovercover h5 {
+          transform: translate(0px, -10px);
+          opacity: 0;
+          transition: transform 0.25s, opacity 0.2s;
+          font-family: "Source Sans Pro", sans-serif; }
+        .portfolio .project.imgWrapper .hovercover h4 {
+          color: #1C444F;
+          font-size: 30px; }
+        .portfolio .project.imgWrapper .hovercover h5 {
+          color: #4876AB;
+          font-size: 20px; }
+        .portfolio .project.imgWrapper .hovercover .learnmore {
+          transform: translate(0px, 120px);
+          opacity: 0;
+          transition: transform 0.25s, opacity 0.2s;
+          color: #1C444F;
+          background: #C6E4DC;
+          border: 3px solid #1C444F;
+          border-radius: 2px;
+          position: relative;
+          display: inline-block;
+          margin: 0 auto;
+          width: 180px;
+          height: 50px; }
+          .portfolio .project.imgWrapper .hovercover .learnmore button {
+            color: #1C444F;
+            background: none;
+            border: 0;
+            box-shadow: none;
+            text-decoration: none;
+            font-size: 15px;
+            position: absolute;
+            display: inline-block;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            padding: 8px;
+            z-index: 2;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: bold; }
+          .portfolio .project.imgWrapper .hovercover .learnmore i {
+            color: #1C444F;
+            text-decoration: none;
+            font-size: 18px;
+            display: inline-block; }
+          .portfolio .project.imgWrapper .hovercover .learnmore:hover {
+            opacity: 1;
+            transition: 0.2s all ease;
+            background: #4876AB;
+            color: #e8f1ff; }
+      .portfolio .project.imgWrapper:hover .hovercover {
+        opacity: 0.85;
+        transition: opacity 0.15s ease-in; }
+        .portfolio .project.imgWrapper:hover .hovercover h4, .portfolio .project.imgWrapper:hover .hovercover h5 {
+          transform: translate(0px, 20px);
+          opacity: 1;
+          transition: transform 0.25s, opacity 0.2s; }
+        .portfolio .project.imgWrapper:hover .hovercover .learnmore {
+          transform: translate(0px, 90px);
+          opacity: 1;
+          transition: transform 0.25s, opacity 0.2s; }
 
 .contact {
   text-align: center;
   background-color: #4876AB;
   margin: 0 auto;
   display: block;
-  padding: 20px;
-}
-.contact i {
-  padding: 20px;
-  font-size: 3em;
-  color: #1C444F;
-}
-.contact img {
-  height: 80px;
-}
+  padding: 20px; }
+  .contact i {
+    padding: 20px;
+    font-size: 3em;
+    color: #1C444F; }
+  .contact img {
+    height: 80px; }
 
 @media screen and (min-width: 0) {
-  .skillbar .skillbar-title {
-    font-size: 8px;
-  }
-}
+  .resume iframe {
+    height: 325px; } }
 @media screen and (min-width: 530px) {
   .welcome .content .titles h1 {
-    font-size: 35px;
-  }
+    font-size: 35px; }
   .welcome .content .titles h2 {
-    font-size: 30px;
-  }
+    font-size: 30px; }
 
   .info h1 {
-    font-size: 40px;
-  }
+    font-size: 40px; }
   .info h2 {
-    font-size: 30px;
-  }
+    font-size: 30px; }
 
-  .experiences .imgWrapper {
+  .experiences .imgWrapper, .resume .imgWrapper {
     height: 150px;
-    width: 150px;
-  }
-  .experiences h3 {
-    font-size: 20px;
-  }
-  .experiences p {
-    font-size: 15px;
-  }
+    width: 150px; }
+  .experiences h3, .resume h3 {
+    font-size: 20px; }
+  .experiences h4, .resume h4 {
+    font-size: 15px; }
+  .experiences p, .resume p {
+    font-size: 15px; }
 
   .self .imgWrapper {
     height: 200px;
-    width: 200px;
-  }
+    width: 200px; }
+
+  .resume iframe {
+    height: 650px; }
 
   .project.imgWrapper .img {
-    background-position: -50px 0;
-  }
-
-  .skillbar .skillbar-title {
-    font-size: 10px;
-    width: 100px;
-  }
-}
+    background-position: -50px 0; } }
 @media screen and (min-width: 768px) {
   .welcome .content .titles h1 {
-    font-size: 45px;
-  }
+    font-size: 45px; }
   .welcome .content .titles h2 {
-    font-size: 40px;
-  }
+    font-size: 40px; }
   .welcome .content img {
-    width: 250px;
-  }
+    width: 250px; }
 
   .info h1 {
-    font-size: 50px;
-  }
+    font-size: 50px; }
   .info h2 {
-    font-size: 35px;
-  }
+    font-size: 35px; }
 
-  .experiences .imgWrapper, .self .imgWrapper {
+  .experiences .imgWrapper, .self .imgWrapper, .resume .imgWrapper {
     height: 200px;
-    width: 200px;
-  }
-  .experiences h3, .self h3 {
-    font-size: 25px;
-  }
-  .experiences p, .self p {
-    font-size: 15px;
-  }
+    width: 200px; }
+  .experiences h3, .self h3, .resume h3 {
+    font-size: 25px; }
+  .experiences h4, .self h4, .resume h4 {
+    font-size: 20px; }
+  .experiences p, .self p, .resume p {
+    font-size: 15px; }
 
   .self .imgWrapper {
     height: 400px;
-    width: 400px;
-  }
+    width: 400px; }
+
+  .resume iframe {
+    height: 350px; }
 
   .project.imgWrapper .img {
-    background-position: 0 0;
-  }
-
-  .skillbar .skillbar-title {
-    font-size: 12px;
-    width: 120px;
-  }
-}
+    background-position: 0 0; } }
 @media screen and (min-width: 1000px) {
   .welcome .content .titles h1 {
-    font-size: 55px;
-  }
+    font-size: 55px; }
   .welcome .content .titles h2 {
-    font-size: 50px;
-  }
+    font-size: 50px; }
   .welcome .content img {
-    width: 300px;
-  }
+    width: 300px; }
 
   .info h1 {
-    font-size: 55px;
-  }
+    font-size: 55px; }
   .info h2 {
-    font-size: 35px;
-  }
+    font-size: 35px; }
 
-  .experiences h3, .self h3 {
-    font-size: 25px;
-  }
-  .experiences p, .self p {
-    font-size: 15px;
-  }
-}
+  .experiences h3, .self h3, .resume h3 {
+    font-size: 25px; }
+  .experiences h4, .self h4, .resume h4 {
+    font-size: 20px; }
+  .experiences p, .self p, .resume p {
+    font-size: 15px; }
+
+  .resume iframe {
+    height: 450px; } }
 @keyframes fadein {
   from {
-    opacity: 0;
-  }
+    opacity: 0; }
   to {
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
 
 /*# sourceMappingURL=main.css.map */
