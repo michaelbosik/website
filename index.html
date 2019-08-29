@@ -199,7 +199,7 @@
                      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                         <div class="modal-content">
                            <div class="modal-header">
-                              <h5 class="modal-title">Modal Title</h5>
+                              <h5 class="modal-title">AFrame In-Browser VR</h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                  <span aria-hidden="true">&times;</span>
                               </button>
@@ -208,16 +208,20 @@
                               <div class="carousel w-75 h-75 slide" data-ride="carousel" data-interval="5000">
                                  <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                       <img class="h-100 w-100 img-responsive" src="images/about/csexample.png">
+                                       <img class="h-100 w-100 img-responsive" src="images/projects/thumbnails/solarsystem.png">
                                     </div>
                                  </div>
                               </div>
-                              <p>Modal Description
+                              <p>In my Human Computer Interaction course, I created a virtual environment in a browser using
+                                 the AFrame libraries. This virtual environment is our solar system. It was cool to see how shapes can
+                                 easily be rendered an animated in realtime and how the technology in our hands can be capable of creating
+                                 digital spaces. In this simulation, you can click and drag the mouse to move your view as well as use WASD 
+                                 to move.
                               </p>
                            </div>
                            <div class="modal-footer">
                               <div class="modal-btn">
-                                 <a href="wip.html" target="__blank"><i class="fas fa-external-link-alt"></i> View/Down</a>
+                                 <a href="http://michaelbosik.github.io/designforanotherworld" target="__blank"><i class="fas fa-external-link-alt"></i> View Site</a>
                               </div>
                            </div>
                         </div>
@@ -467,7 +471,7 @@
 
                   <!--Projects-->
                   <div class="row justify-content-center">
-                     <div class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1000">
+                     <div id="clearVue" class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1000">
                         <img src="images/projects/thumbnails/clearvue.png">
                         <div class="hovercover">
                            <h4>Clear Vue</h4>
@@ -477,7 +481,7 @@
                            </div>
                         </div>
                      </div>
-                     <div class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1400">
+                     <div id="Graph" class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1400">
                         <img src="images/projects/thumbnails/webgl.png" alt="graphics">
                         <div class="hovercover">
                            <h4>WebGL Projects</h4>
@@ -487,7 +491,7 @@
                            </div>
                         </div>
                      </div>
-                     <div class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1800">
+                     <div id="VR" class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1800">
                         <img src="images/projects/thumbnails/solarsystem.png">
                         <div class="hovercover">
                            <h4>In-Browser VR</h4>
@@ -497,7 +501,7 @@
                            </div>
                         </div>
                      </div>
-                     <div class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1000">
+                     <div id="Web" class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1000">
                         <img src="images/projects/thumbnails/website.png">
                         <div class="hovercover">
                            <h4>This Website</h4>
@@ -507,7 +511,7 @@
                            </div>
                         </div>
                      </div>
-                     <div class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1400">
+                     <div id="Alone" class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1400">
                         <img src="images/projects/thumbnails/alone.png">
                         <div class="hovercover">
                            <h4>Alone</h4>
@@ -517,7 +521,7 @@
                            </div>
                         </div>
                      </div>
-                     <div class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1800">
+                     <div id="Gomp" class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1800">
                         <img src="images/projects/thumbnails/gompei.png">
                         <div class="hovercover">
                            <h4>The Legend of Gompei</h4>
@@ -527,7 +531,7 @@
                            </div>
                         </div>
                      </div>
-                     <div class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1000">
+                     <div id="Ire" class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1000">
                         <img src="images/projects/thumbnails/ireiterum.png">
                         <div class="hovercover">
                            <h4>IreIterum</h4>
@@ -537,7 +541,7 @@
                            </div>
                         </div>
                      </div>
-                     <div class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1400">
+                     <div id="Unreal" class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1400">
                         <img src="images/projects/thumbnails/gamelevel.png">
                         <div class="hovercover">
                            <h4>Unreal Tournament Level</h4>
@@ -547,7 +551,7 @@
                            </div>
                         </div>
                      </div>
-                     <div class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1800">
+                     <div id="Video" class="col-lg-4 col-md-6 col-12 project imgWrapper" data-aos="fade-up" data-aos-duration="1800">
                         <img src="images/projects/thumbnails/seedsofstem.png">
                         <div class="hovercover">
                            <h4>Seeds of Stem</h4>
